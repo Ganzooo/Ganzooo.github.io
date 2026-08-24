@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-*LiteRT-Optimized INT8 LLM for Raspberry Pi4 Deployment* presented at **ICCV Workshop 2025**.
+_LiteRT-Optimized INT8 LLM for Raspberry Pi4 Deployment_ presented at **ICCV Workshop 2025**.

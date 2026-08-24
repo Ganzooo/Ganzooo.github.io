@@ -2,7 +2,7 @@
 layout: page
 title: Real-Time Super-Resolution on Edge NPUs
 description: Two first-place challenge solutions, and the reparameterization idea behind both.
-img:
+img: assets/img/projects/repconv.png
 importance: 5
 category: Research
 related_publications: true
@@ -20,7 +20,7 @@ Two challenge solutions built on the same underlying idea.
 
 **Mobile SR** — an efficient network using **reparameterization (RepConv)** specifically to reduce INT8 quantization error, targeting a mobile NPU. I led this team.
 
-The common thread is reparameterization: train with a wide multi-branch block, then fold it algebraically into a single convolution for inference. You get the representational capacity of the wide block at the runtime cost of the narrow one — and, more usefully here, at the *quantization behaviour* of the narrow one, because there are fewer branches whose activation ranges have to be reconciled.
+The common thread is reparameterization: train with a wide multi-branch block, then fold it algebraically into a single convolution for inference. You get the representational capacity of the wide block at the runtime cost of the narrow one — and, more usefully here, at the _quantization behaviour_ of the narrow one, because there are fewer branches whose activation ranges have to be reconciled.
 
 {% include figure.liquid loading="eager" path="assets/img/projects/repconv.svg" class="img-fluid rounded" %}
 
@@ -28,10 +28,10 @@ The common thread is reparameterization: train with a wide multi-branch block, t
 
 ## Result
 
-| Solution | Challenge | Result |
-|---|---|---|
-| CASR | AIS 2024 @ CVPR | **1st place** — 33.11 dB PSNR (QP31) at 0.47 ms GPU runtime |
-| Mobile SR | Mobile AI & AIM 2022 @ ECCV | **1st place** — 30.03 dB PSNR at 19.20 ms on a Synaptics VS680 edge NPU |
-| Quantized SR | MAI 2025 @ CVPR | **2nd place** |
+| Solution     | Challenge                   | Result                                                                  |
+| ------------ | --------------------------- | ----------------------------------------------------------------------- |
+| CASR         | AIS 2024 @ CVPR             | **1st place** — 33.11 dB PSNR (QP31) at 0.47 ms GPU runtime             |
+| Mobile SR    | Mobile AI & AIM 2022 @ ECCV | **1st place** — 30.03 dB PSNR at 19.20 ms on a Synaptics VS680 edge NPU |
+| Quantized SR | MAI 2025 @ CVPR             | **2nd place**                                                           |
 
 Code: [Ganzooo/LRSRN](https://github.com/Ganzooo/LRSRN) - the lightweight real-time super-resolution network.

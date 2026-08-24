@@ -28,12 +28,12 @@ Perception research is usually benchmarked on a workstation GPU. Perception that
 
 ## Result
 
-| Task | Result | Hardware |
-|---|---|---|
-| Semantic segmentation | 77.1% mean IoU on Cityscapes at 102 FPS | RTX 2080Ti |
-| 2D detection | 2x parameter reduction at 0.02 mAP cost; 95% accuracy at 45 FPS | NextChip APACHE6 NPU |
-| Traffic-light recognition | 90% accuracy | - |
-| Error-pixel recovery | Real-time restoration | TI TDA4VM |
+| Task                      | Result                                                          | Hardware             |
+| ------------------------- | --------------------------------------------------------------- | -------------------- |
+| Semantic segmentation     | 77.1% mean IoU on Cityscapes at 102 FPS                         | RTX 2080Ti           |
+| 2D detection              | 2x parameter reduction at 0.02 mAP cost; 95% accuracy at 45 FPS | NextChip APACHE6 NPU |
+| Traffic-light recognition | 90% accuracy                                                    | -                    |
+| Error-pixel recovery      | Real-time restoration                                           | TI TDA4VM            |
 
 The sensor-integrity work is the piece that is easiest to skip and worst to omit. A perception stack that trusts a degraded sensor does not fail loudly — it keeps producing confident output from bad input, which is the hardest failure to detect downstream.
 

@@ -2,7 +2,7 @@
 layout: page
 title: Traffic-Police Gesture Recognition at a Control Tower
 description: A deployed edge system, not just a model.
-img:
+img: assets/img/projects/police_deployment.png
 importance: 7
 category: Automotive
 related_publications: true

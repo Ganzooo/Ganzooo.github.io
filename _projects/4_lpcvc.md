@@ -2,7 +2,7 @@
 layout: page
 title: On-Device VLM for AI-Generated Content Detection
 description: 1st place, LPCVC 2026 Track 3 - a vision-language detector inside a 500-token budget.
-img:
+img: assets/img/projects/lpcvc_two_stage.png
 importance: 4
 category: Research
 related_publications: false

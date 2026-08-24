@@ -6,7 +6,7 @@ description: Selected work in efficient on-device AI and automotive perception.
 nav: true
 nav_order: 3
 display_categories: [Automotive, Research]
-horizontal: false
+horizontal: true
 ---
 
 <!-- pages/projects.md -->
