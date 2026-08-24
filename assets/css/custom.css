@@ -82,3 +82,17 @@
   color: var(--global-text-color-light);
   margin-top: 2.2rem;
 }
+
+/* --- Authorship / status note on a publication -----------------------------
+   jekyll-scholar renders the `note` field into a second .periodical div, where
+   it looks identical to the venue line and disappears. Corresponding-author and
+   equal-contribution credit is the part a reader is scanning for, so give it an
+   accent rule and let it stand apart from the venue. */
+.publications .periodical + .periodical {
+  margin-top: 0.28rem;
+  padding-left: 0.55rem;
+  border-left: 2px solid var(--global-theme-color);
+  font-size: 0.86rem;
+  font-style: normal;
+  color: var(--global-text-color);
+}
