@@ -2,7 +2,7 @@
 layout: page
 title: Driver-State Monitoring for UN-R171 DCAS
 description: Building the device a regulation names, to the standard that defines it.
-img:
+img: assets/img/projects/dcas_dashboard.png
 importance: 1
 category: Automotive
 related_publications: false
@@ -32,6 +32,10 @@ Every NCAP threshold lives in a configuration file, never as a constant in sourc
 I also produced the conformance mapping across **UN-R171, GSR II, Euro NCAP and UN-R157**. That exercise is where you learn that requirements which look interchangeable are not: GSR II states its drowsiness criterion in KSS, this system measures PERCLOS, and neither derives from the other. Writing that non-equivalence down explicitly was more useful than quietly picking one.
 
 ## Result
+
+{% include figure.liquid loading="eager" path="assets/img/projects/dcas_dashboard.png" class="img-fluid rounded z-depth-1" %}
+
+<div class="caption">Live driver-state output. The top overlay shows the per-frame signals (eye state, gaze zone, head pose); the strip below shows each Euro NCAP rule against its threshold — eye-closure and off-road duration in seconds, PERCLOS as a percentage — and the banner shows the state those rules resolve to.</div>
 
 A running system that emits a per-frame driver state with the full signal trace behind it — eye-closure duration, off-road gaze duration, and PERCLOS each shown against their rule thresholds, so any state transition can be traced back to the rule that fired it.
 

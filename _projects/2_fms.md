@@ -24,6 +24,10 @@ Designed and built the deployed inference system for a national fleet-management
 
 The buffer stage is what makes per-seat classification work at all. Classifying a single frame cannot distinguish "putting a seatbelt on" from "taking it off"; both need a time window, and the window has to follow the person rather than the seat, because occupants move.
 
+{% include figure.liquid loading="eager" path="assets/img/projects/fms_action_result.jpg" class="img-fluid rounded z-depth-1" %}
+
+<div class="caption">Per-occupant output on an IR frame: a stable track ID, the pose keypoints feeding the keypoint branch, and the classified action with its confidence. The subject's face is blurred here; it is not blurred in the system itself.</div>
+
 ## Result
 
 - **TensorRT FP16 conversion cut in-cabin inference from 14.44 ms to 9.59 ms per frame**, holding the 10 Hz contract.
