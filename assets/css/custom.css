@@ -1,5 +1,6 @@
 ---
 ---
+
 /* ---------------------------------------------------------------------------
    Site overrides for al-folio.
    Only additive rules live here; nothing in the theme is edited directly.
@@ -20,12 +21,16 @@
   padding-bottom: 0.45rem;
   border-bottom: 1px solid var(--global-divider-color);
 }
-.projects h2.category:first-of-type { margin-top: 1.6rem; }
+.projects h2.category:first-of-type {
+  margin-top: 1.6rem;
+}
 
 /* --- "news" heading on the about page --------------------------------------
    Hardcoded lowercase in the theme layout; capitalize it in CSS rather than
    shadowing the whole layout file. */
-.post h2 > a[href$="/news/"] { text-transform: capitalize; }
+.post h2 > a[href$="/news/"] {
+  text-transform: capitalize;
+}
 
 /* --- Profile block ---------------------------------------------------------
    more-info renders in a monospace face by default, which looks like output
@@ -64,8 +69,12 @@
 }
 
 /* --- Typography ------------------------------------------------------------ */
-.post-title { letter-spacing: -0.015em; }
-.post-description { color: var(--global-text-color-light); }
+.post-title {
+  letter-spacing: -0.015em;
+}
+.post-description {
+  color: var(--global-text-color-light);
+}
 .publications h2.bibliography {
   font-size: 0.8rem;
   font-weight: 700;
