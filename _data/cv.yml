@@ -1,0 +1,116 @@
+cv:
+  name: Ganzorig Gankhuyag
+  label: Computer Vision Researcher, Efficient & Edge AI
+  email: gnzrg25@gmail.com
+  location: Seoul, South Korea
+  image: ""
+  summary: >-
+    Computer-vision researcher at KETI working on efficient, on-device AI: making
+    state-of-the-art vision and vision-language models run inside real latency,
+    memory and power budgets on edge hardware.
+
+  social_networks:
+    - network: LinkedIn
+      username: ganzorig-gankhuyag-4861b6b4
+    - network: Google Scholar
+      username: PR4pvCMAAAAJ
+
+  sections:
+    Experience:
+      - company: Korea Electronics Technology Institute (KETI)
+        position: Postdoctoral Researcher
+        location: South Korea
+        start_date: 2018-06
+        end_date: present
+        highlights:
+          - "Driver-state monitoring system built to the requirement UN-R171 Section 5.5.4 sets for DCAS: gaze zone, eye closure (EAR), PERCLOS and head pose feeding a six-rule Euro NCAP state machine. Produced the conformance mapping across UN-R171, GSR II, Euro NCAP and UN-R157."
+          - "Multi-camera in-cabin inference system: four cameras through ROS 2 on a single NVIDIA Jetson AGX Orin 64GB, one 10 Hz JSON stream over TCP. TensorRT FP16 cut inference from 14.44 to 9.59 ms per frame."
+          - "QueryGaze: single-pass gaze-target model on a frozen DINOv3 backbone, 0.956 GazeFollow AUC at 15M parameters, real time on-device."
+          - "Real-time super-resolution for edge NPUs; first place at AIS 2024 (CVPR) and Mobile AI 2022 (ECCV)."
+          - "On-device LLM inference (LLaMA-3.2, Qwen, DeepSeek) on Raspberry Pi 4: 2x faster at 4.91 W vs 5.52 W."
+          - "Autonomous-driving perception: semantic segmentation (77.1% mIoU at 102 FPS), 2D/3D detection, traffic-light recognition, sensor-integrity models on TI TDA4VM and NVIDIA Xavier."
+      - company: Chowis Co., Ltd.
+        position: Computer Vision Researcher
+        location: South Korea
+        start_date: 2016-11
+        end_date: 2018-05
+        highlights:
+          - "Skin-pore, wrinkle and hair-loss detection algorithms for handheld diagnostic devices, over 90% diagnostic accuracy."
+      - company: Huree University of ICT
+        position: Assistant Professor, Electronic Engineering
+        location: Ulaanbaatar, Mongolia
+        start_date: 2009-03
+        end_date: 2010-08
+        highlights:
+          - "Taught undergraduate courses in the Electronic Engineering Department."
+
+    Education:
+      - institution: Yonsei University
+        location: Seoul, South Korea
+        area: Electrical and Electronic Engineering
+        degree: PhD
+        start_date: 2011
+        end_date: 2020
+        highlights:
+          - "Image & Information Lab. Coursework and dissertation completed 2016; degree conferred 2020."
+          - "Dissertation: A Study on Finite Field Compressive Sensing Framework for Network Coding."
+      - institution: Konkuk University
+        location: Seoul, South Korea
+        area: Electronics & Information Communication
+        degree: MS
+        start_date: 2006
+        end_date: 2009
+        highlights:
+          - "VLSI Lab. Dissertation: Implementation of an H.264 encoder using Intel Wireless MMX technology."
+      - institution: Huree University of ICT
+        location: Ulaanbaatar, Mongolia
+        area: Information and Communication
+        degree: BS
+        start_date: 2002
+        end_date: 2006
+
+    Awards:
+      - label: 1st Place, Track 3
+        details: "Low-Power Computer Vision Challenge (LPCVC) 2026 @ CVPR - on-device vision-language AIGC detection, rubric 0.827 at 30.48 TPS"
+      - label: Outstanding Employee Award
+        details: "Korea Electronics Technology Institute (KETI), 2026"
+      - label: 2nd Place
+        details: "Quantized Image Super-Resolution, MAI 2025 @ CVPR"
+      - label: 1st Place
+        details: "Real-Time Image Super-Resolution, AIS 2024 @ CVPR"
+      - label: 1st Place (Team Leader)
+        details: "Mobile AI & AIM 2022 Real-Time Super-Resolution Challenge @ ECCV"
+      - label: 2nd Place
+        details: "AI Model Optimization, AI Grand Challenge 2020, IITP"
+      - label: Best Paper Award
+        details: "IICCC 2015, IPACT"
+
+    Skills:
+      - label: Efficient & Edge AI
+        details: "INT8 PTQ/QAT, structural pruning, reparameterization (RepConv), TensorRT, ONNX Runtime, CUDA, TFLite/LiteRT; NVIDIA Jetson/Xavier, TI TDA4VM, NextChip NPU, Qualcomm Hexagon/Snapdragon, Hailo, Synaptics, Raspberry Pi"
+      - label: Computer Vision
+        details: "Semantic segmentation, 2D/3D object detection, action recognition, gaze estimation, super-resolution, image restoration"
+      - label: Deep Learning
+        details: "PyTorch, TensorFlow, CLIP, DINOv3, DETR, Transformers, vision-language models, LoRA fine-tuning (Qwen2-VL, LLaMA)"
+      - label: Video & Codecs
+        details: "AV1 (tiled encoding), HEVC (H.265), H.264/AVC, MPEG-DASH"
+      - label: Programming & Tools
+        details: "Python, C/C++ (embedded), MATLAB; Linux, ROS / ROS 2, Git, Docker, FFmpeg, GStreamer, OpenCV"
+
+    Patents:
+      - label: US20250200761A1 (2025)
+        details: "Deep learning-based motion recognition method and system using multiple feature information"
+      - label: US12406532B2 (2025)
+        details: "Behavior Recognition AI Network System and Method for Efficient Recognition of Hand Signals and Gestures"
+      - label: US12051230B2 (2024)
+        details: "Accelerated Processing Method for Deep Learning-Based Panoptic Segmentation Using an RPN Skip Based on Complexity"
+      - label: US11290714B2 (2020)
+        details: "Motion-constrained AV1 encoding method and apparatus for tiled streaming"
+
+    Languages:
+      - label: Mongolian
+        details: Native
+      - label: Korean
+        details: Fluent (TOPIK Level 6)
+      - label: English
+        details: Fluent
