@@ -34,4 +34,6 @@ Two current projects: a **driver-state monitoring system** built to the requirem
 
 Before that I spent several years on autonomous-driving perception — real-time semantic segmentation, 2D and 3D detection, traffic-light recognition — and on real-time super-resolution, where our team took first place at **AIS 2024 (CVPR)** and **Mobile AI 2022 (ECCV)**. Most recently, first place in **LPCVC 2026 Track 3 (CVPR)** for on-device vision-language AI-generated-content detection under a hard token budget.
 
+I work as part of **[Team Z6](https://teamz6.github.io/)**, a KETI research group focused on efficient, on-device computer vision — most of the challenge results above are team efforts.
+
 I did my Ph.D. at Yonsei University (Image & Information Lab) and my M.S. at Konkuk University (VLSI Lab).
