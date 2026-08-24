@@ -14,4 +14,8 @@ Stage 1 produces free-text reasoning over eight visual criteria. Stage 2 takes o
 
 An auxiliary classification head added **+2.08 pp** on the 26,033-image Chameleon benchmark.
 
+**Getting it onto the phone.** The LoRA-fine-tuned model is quantized to **W4A16** with Qualcomm AIMET and exported as a **QNN binary** for the Snapdragon 8 Gen 5. Weight-only 4-bit with 16-bit activations is the setting that survives here: the language head tolerates aggressive weight quantization, the activations do not.
+
 **Result.** 1st place in the 2026 Low-Power Computer Vision Challenge Track 3 at CVPR 2026, with an official rubric score of **0.827 at 30.48 TPS**.
+
+Code, LoRA adapter and training dataset are released: [Ganzooo/LPCVC2026-Track3-OptimAI-1st](https://github.com/Ganzooo/LPCVC2026-Track3-OptimAI-1st) (MIT).

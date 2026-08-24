@@ -17,3 +17,5 @@ Several years of perception work at KETI, with a consistent constraint: it has t
 **Traffic lights.** ResNet and ResNet+LSTM classification at 90%, integrated with a YOLOv7 + SORT tracker over single and temporal frames.
 
 **Sensor integrity.** Camera soil detection for surround-view lenses on NVIDIA Xavier, and error-pixel detection and recovery on **TI TDA4VM** — because a perception stack that trusts a degraded sensor fails quietly, which is the worst way to fail.
+
+Code: [Ganzooo/soil_segmentation](https://github.com/Ganzooo/soil_segmentation).

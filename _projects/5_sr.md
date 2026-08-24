@@ -17,3 +17,5 @@ Super-resolution is a good stress test for edge deployment: the quality metric i
 The common thread is reparameterization: train with a wide multi-branch block, fold it into a single convolution for inference, and get the accuracy of the wide block at the cost and — importantly — the quantization behaviour of the narrow one.
 
 Also 2nd place at MAI 2025 (CVPR) for quantized image super-resolution.
+
+Code: [Ganzooo/LRSRN](https://github.com/Ganzooo/LRSRN) - the lightweight real-time super-resolution network.

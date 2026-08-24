@@ -1,14 +1,8 @@
 github_users:
-  - torvalds
-  - alshedivat
-
-repo_description_lines_max: 2
+  - Ganzooo
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - Ganzooo/LPCVC2026-Track3-OptimAI-1st
+  - Ganzooo/LRSRN
+  - Ganzooo/soil_segmentation
+  - Ganzooo/yolov10_track_ros_gesture
