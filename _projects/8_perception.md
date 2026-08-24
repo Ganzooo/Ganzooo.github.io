@@ -8,14 +8,29 @@ category: Automotive
 related_publications: true
 ---
 
-Several years of perception work at KETI, with a consistent constraint: it has to run on the board the vehicle actually has.
+## Why it is needed
 
-**Semantic segmentation.** A UNet architecture with HardNet blocks and a self-attention module, with an end-to-end TensorRT framework ported to ROS — **77.1% mean IoU on Cityscapes at 102 FPS** on an RTX 2080Ti.
+Perception research is usually benchmarked on a workstation GPU. Perception that ships runs on an automotive SoC with a fixed power budget, chosen years before the model was trained. Everything below was built under that second constraint.
 
-**2D detection.** A YOLOv7 detector for emergency-vehicle and traffic-police perception, structurally pruned for a **2x parameter reduction at a 0.02 mAP cost**, deployed to a **NextChip APACHE6 NPU** at 95% accuracy and 45 FPS.
+## What I did
 
-**Traffic lights.** ResNet and ResNet+LSTM classification at 90%, integrated with a YOLOv7 + SORT tracker over single and temporal frames.
+**Semantic segmentation.** A UNet architecture with HardNet blocks and a self-attention module, with an end-to-end TensorRT framework ported to ROS.
 
-**Sensor integrity.** Camera soil detection for surround-view lenses on NVIDIA Xavier, and error-pixel detection and recovery on **TI TDA4VM** — because a perception stack that trusts a degraded sensor fails quietly, which is the worst way to fail.
+**2D detection.** A YOLOv7 detector for emergency-vehicle and traffic-police perception, structurally pruned and deployed to a **NextChip APACHE6 NPU**.
+
+**Traffic lights.** ResNet and ResNet+LSTM classification, integrated with a YOLOv7 + SORT tracker so the decision uses temporal context rather than a single frame — a light briefly occluded by a truck should not read as "off".
+
+**Sensor integrity.** Camera soil detection for surround-view lenses on NVIDIA Xavier, and error-pixel detection and recovery on **TI TDA4VM**.
+
+## Result
+
+| Task | Result | Hardware |
+|---|---|---|
+| Semantic segmentation | 77.1% mean IoU on Cityscapes at 102 FPS | RTX 2080Ti |
+| 2D detection | 2x parameter reduction at 0.02 mAP cost; 95% accuracy at 45 FPS | NextChip APACHE6 NPU |
+| Traffic-light recognition | 90% accuracy | - |
+| Error-pixel recovery | Real-time restoration | TI TDA4VM |
+
+The sensor-integrity work is the piece that is easiest to skip and worst to omit. A perception stack that trusts a degraded sensor does not fail loudly — it keeps producing confident output from bad input, which is the hardest failure to detect downstream.
 
 Code: [Ganzooo/soil_segmentation](https://github.com/Ganzooo/soil_segmentation).

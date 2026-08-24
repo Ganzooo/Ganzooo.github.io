@@ -8,8 +8,20 @@ category: Research
 related_publications: true
 ---
 
-Running an LLM on edge hardware is bounded by memory, latency and power simultaneously, and improving one usually costs another.
+## Why it is needed
 
-This is a lightweight **INT8 (LiteRT)** inference pipeline for deploying **LLaMA-3.2, Qwen and DeepSeek** on a Raspberry Pi 4. It achieves **2x faster inference latency** and lower power draw — **4.91 W against 5.52 W** — compared with framework-native PyTorch baselines, while holding output quality.
+Running a language model on edge hardware is bounded by memory, latency and power at the same time, and the usual moves trade one against another. A Raspberry Pi 4 is a deliberately unforgiving target: no GPU, limited RAM, and a power envelope where a watt is a meaningful fraction of the budget.
 
-Published at ICCV Workshop 2025.
+## What I did
+
+Built a lightweight **INT8 (LiteRT)** inference pipeline for deploying **LLaMA-3.2, Qwen and DeepSeek** on a Raspberry Pi 4, and measured it against the framework-native PyTorch path rather than against a theoretical baseline.
+
+## Result
+
+- **2x faster inference latency**
+- **4.91 W against 5.52 W** — lower power, not just lower latency
+- Output quality held
+
+Published at **ICCV Workshop 2025**.
+
+The power number matters more than it looks. Latency improvements on edge devices often come from working the hardware harder, which shows up as heat and throttling on a sustained workload. Getting latency and power to move in the same direction means the gain survives past the first few seconds.
