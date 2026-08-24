@@ -18,6 +18,10 @@ Traffic-police hand signals override normal traffic rules. A vehicle or roadside
 
 **The system:** I designed the deployed inference pipeline — camera ingest through a **ROS 2** package, on-site inference on an edge compute box **at a traffic control tower**, and recognition results published to other systems over an API.
 
+{% include figure.liquid loading="eager" path="assets/img/projects/police_deployment.svg" class="img-fluid rounded" %}
+
+<div class="caption">The deployed path: camera to ROS 2 ingest, inference on an edge box installed at the control tower, and the recognised gesture published to downstream systems over an API.</div>
+
 ## Result
 
 - **99% accuracy at 33 FPS**

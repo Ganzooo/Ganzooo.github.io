@@ -25,6 +25,10 @@ An auxiliary classification head was added alongside the generative output.
 
 **Getting it onto the phone:** the LoRA-fine-tuned model is quantized to **W4A16** with Qualcomm AIMET and exported as a **QNN binary**. Weight-only 4-bit with 16-bit activations is the setting that survives here — the language head tolerates aggressive weight quantization, the activations do not.
 
+{% include figure.liquid loading="eager" path="assets/img/projects/lpcvc_two_stage.svg" class="img-fluid rounded" %}
+
+<div class="caption">Stage 1 reasons over the image in free text; Stage 2 reads only that text and emits the JSON decision. Dropping the image between stages removes the second vision-encoder pass and leaves the reasoning in a form a human can read.</div>
+
 ## Result
 
 - **1st place, LPCVC 2026 Track 3** at CVPR 2026

@@ -18,6 +18,10 @@ QueryGaze is a **single-pass** gaze-target model. It reuses **DETR detection que
 
 The backbone stays frozen, which keeps the trainable parameter count small and makes the model far more predictable under quantization. It is deployed to an automotive edge NPU with **ViT-aware INT8 quantization**.
 
+{% include figure.liquid loading="eager" path="assets/img/projects/querygaze_arch.svg" class="img-fluid rounded" %}
+
+<div class="caption">The detection queries that already localise each person are reused to condition that person&#39;s gaze prediction, so one forward pass covers everyone in frame. The DINOv3 backbone stays frozen, which keeps the trainable parameter count small and the activation ranges predictable under INT8.</div>
+
 ## Result
 
 - **0.956 GazeFollow AUC** — above the 0.924 human benchmark
