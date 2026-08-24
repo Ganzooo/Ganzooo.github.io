@@ -22,6 +22,10 @@ Two challenge solutions built on the same underlying idea.
 
 The common thread is reparameterization: train with a wide multi-branch block, then fold it algebraically into a single convolution for inference. You get the representational capacity of the wide block at the runtime cost of the narrow one — and, more usefully here, at the *quantization behaviour* of the narrow one, because there are fewer branches whose activation ranges have to be reconciled.
 
+{% include figure.liquid loading="eager" path="assets/img/projects/repconv.svg" class="img-fluid rounded" %}
+
+<div class="caption">Reparameterization: the block is wide while training and a single convolution at inference. The second box is the one that matters for edge deployment - fewer branches means fewer activation ranges to reconcile, which is why the folded network survives INT8 conversion better.</div>
+
 ## Result
 
 | Solution | Challenge | Result |

@@ -16,6 +16,10 @@ Running a language model on edge hardware is bounded by memory, latency and powe
 
 Built a lightweight **INT8 (LiteRT)** inference pipeline for deploying **LLaMA-3.2, Qwen and DeepSeek** on a Raspberry Pi 4, and measured it against the framework-native PyTorch path rather than against a theoretical baseline.
 
+{% include figure.liquid loading="eager" path="assets/img/projects/llm_results.svg" class="img-fluid rounded" %}
+
+<div class="caption">Measured on a Raspberry Pi 4 against the framework-native PyTorch path. Latency and power are on different scales, so they are shown as separate panels rather than forced onto one axis.</div>
+
 ## Result
 
 - **2x faster inference latency**

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 330" width="980" height="330" font-family="Helvetica,Arial,sans-serif">
+<style>.h{font-size:14px;font-weight:700;fill:#1b1d22}.n{font-size:12.5px;font-weight:600;fill:#1b1d22}.s{font-size:11.5px;fill:#6b7280}.note{font-size:12px;fill:#6b7280;font-style:italic}</style>
+<text class="h" x="40" y="34">Training time</text>
+<text class="s" x="40" y="54">wide multi-branch block</text>
+<rect x="40" y="76" width="176" height="44" rx="9" fill="#f7f8f9" stroke="#2a78d6" stroke-width="1.6"/>
+<text class="n" x="128" y="103" text-anchor="middle">3x3 conv</text>
+<path d="M222 98 L246 98 Q262 98 262 127.0 L262 156 L271 156" fill="none" stroke="#b9bec6" stroke-width="1.6"/>
+<rect x="40" y="134" width="176" height="44" rx="9" fill="#f7f8f9" stroke="#eb6834" stroke-width="1.6"/>
+<text class="n" x="128" y="161" text-anchor="middle">1x1 conv</text>
+<path d="M222 156 L271 156" fill="none" stroke="#b9bec6" stroke-width="1.6"/>
+<rect x="40" y="192" width="176" height="44" rx="9" fill="#f7f8f9" stroke="#1baf7a" stroke-width="1.6"/>
+<text class="n" x="128" y="219" text-anchor="middle">identity</text>
+<path d="M222 214 L246 214 Q262 214 262 185.0 L262 156 L271 156" fill="none" stroke="#b9bec6" stroke-width="1.6"/>
+<circle cx="292" cy="156" r="19" fill="#f7f8f9" stroke="#b9bec6" stroke-width="1.6"/>
+<text class="n" x="292" y="162" text-anchor="middle">+</text>
+<path d="M315 156 L392 156" stroke="#b9bec6" stroke-width="2"/>
+<path d="M386 151 L393 156 L386 161" fill="none" stroke="#b9bec6" stroke-width="2"/>
+<text class="s" x="356" y="145" text-anchor="middle">fold</text>
+<text class="h" x="410" y="34">Inference time</text>
+<text class="s" x="410" y="54">one equivalent convolution</text>
+<rect x="410" y="121" width="214" height="70" rx="11" fill="#f7f8f9" stroke="#2a78d6" stroke-width="1.8"/>
+<text class="n" x="517" y="151" text-anchor="middle">single 3x3 conv</text>
+<text class="s" x="517" y="173" text-anchor="middle">algebraically equivalent</text>
+<path d="M632 156 L688 156" stroke="#b9bec6" stroke-width="2"/>
+<path d="M682 151 L689 156 L682 161" fill="none" stroke="#b9bec6" stroke-width="2"/>
+<rect x="704" y="84" width="236" height="60" rx="11" fill="#f7f8f9" stroke="#1baf7a" stroke-width="1.6"/>
+<text class="n" x="822" y="110" text-anchor="middle">Narrow-block runtime</text>
+<text class="s" x="822" y="129" text-anchor="middle">one branch to execute</text>
+<rect x="704" y="158" width="236" height="60" rx="11" fill="#f7f8f9" stroke="#1baf7a" stroke-width="1.6"/>
+<text class="n" x="822" y="184" text-anchor="middle">Narrow-block quantization</text>
+<text class="s" x="822" y="203" text-anchor="middle">one activation range to fit</text>
+<text class="note" x="40" y="308">Capacity of the wide block at the cost - and the quantization behaviour - of the narrow one.</text>
+</svg>
