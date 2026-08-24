@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /repositories/
+permalink: /code/
 title: code
 description: Released implementations and challenge solutions.
 nav: true
