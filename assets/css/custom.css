@@ -1,0 +1,75 @@
+---
+---
+/* ---------------------------------------------------------------------------
+   Site overrides for al-folio.
+   Only additive rules live here; nothing in the theme is edited directly.
+   --------------------------------------------------------------------------- */
+
+/* --- Section headings on the projects page ---------------------------------
+   The theme renders these very large, right-aligned and near-white, which reads
+   as decoration rather than as structure. Make them a normal left-aligned label. */
+.projects h2.category {
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  opacity: 1;
+  margin: 2.6rem 0 1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+.projects h2.category:first-of-type { margin-top: 1.6rem; }
+
+/* --- "news" heading on the about page --------------------------------------
+   Hardcoded lowercase in the theme layout; capitalize it in CSS rather than
+   shadowing the whole layout file. */
+.post h2 > a[href$="/news/"] { text-transform: capitalize; }
+
+/* --- Profile block ---------------------------------------------------------
+   more-info renders in a monospace face by default, which looks like output
+   rather than an address. */
+.profile .more-info {
+  font-family: inherit;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--global-text-color-light);
+}
+.profile img {
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Project cards ---------------------------------------------------------
+   Slightly calmer borders, and a lift on hover so the cards read as clickable. */
+.card {
+  border: 1px solid var(--global-divider-color);
+  box-shadow: none;
+  transition:
+    transform 0.14s ease,
+    box-shadow 0.14s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+.card .card-title {
+  font-size: 1.28rem;
+  line-height: 1.25;
+}
+.card .card-text {
+  color: var(--global-text-color-light);
+  font-size: 0.94rem;
+}
+
+/* --- Typography ------------------------------------------------------------ */
+.post-title { letter-spacing: -0.015em; }
+.post-description { color: var(--global-text-color-light); }
+.publications h2.bibliography {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--global-text-color-light);
+  margin-top: 2.2rem;
+}
