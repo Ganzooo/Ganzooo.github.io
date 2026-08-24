@@ -4,7 +4,7 @@ title: Multi-Camera In-Cabin Inference System
 description: Four cameras, one embedded board, a fixed 10 Hz contract.
 img:
 importance: 2
-category: automotive
+category: Automotive
 related_publications: false
 ---
 

@@ -4,7 +4,7 @@ title: On-Device LLM Inference
 description: LLaMA, Qwen and DeepSeek on a Raspberry Pi 4, at half the latency.
 img:
 importance: 6
-category: research
+category: Research
 related_publications: true
 ---
 

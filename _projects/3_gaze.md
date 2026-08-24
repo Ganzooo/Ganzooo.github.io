@@ -4,7 +4,7 @@ title: QueryGaze — Gaze Estimation for Automotive Edge NPUs
 description: Reusing detection queries as gaze prompts, at 15M parameters.
 img:
 importance: 3
-category: research
+category: Research
 related_publications: false
 ---
 

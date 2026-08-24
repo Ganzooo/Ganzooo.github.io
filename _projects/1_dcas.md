@@ -4,7 +4,7 @@ title: Driver-State Monitoring for UN-R171 DCAS
 description: A driver monitoring system built to the requirement the regulation actually names.
 img:
 importance: 1
-category: automotive
+category: Automotive
 related_publications: false
 ---
 

@@ -4,7 +4,7 @@ title: Autonomous-Driving Perception on Automotive SoCs
 description: Segmentation, detection and sensor integrity, sized for the hardware that ships.
 img:
 importance: 8
-category: automotive
+category: Automotive
 related_publications: true
 ---
 

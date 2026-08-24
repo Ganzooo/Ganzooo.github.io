@@ -4,7 +4,7 @@ title: Real-Time Super-Resolution on Edge NPUs
 description: Two first-place challenge solutions, and the reparameterization trick behind them.
 img:
 importance: 5
-category: research
+category: Research
 related_publications: true
 ---
 
