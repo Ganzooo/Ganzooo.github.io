@@ -1,6 +1,6 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description: Selected work in efficient on-device AI and automotive perception.
 nav: true

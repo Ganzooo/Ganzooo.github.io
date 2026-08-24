@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Computer-vision researcher at <a href="https://www.keti.re.kr/">KETI</a> — efficient and on-device AI.
 
