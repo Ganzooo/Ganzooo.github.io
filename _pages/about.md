@@ -6,7 +6,7 @@ subtitle: Computer-vision researcher at <a href="https://www.keti.re.kr/">KETI</
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: a1_ganzo.jpg
   image_circular: false
   more_info: >
     <p>Korea Electronics Technology Institute</p>
