@@ -33,4 +33,4 @@ Code: [Ganzooo/yolov10_track_ros_gesture](https://github.com/Ganzooo/yolov10_tra
 
 ---
 
-<strong>Related</strong> — [Autonomous-driving perception]({{ '/projects/8_perception/' | relative_url }}) · [Multi-camera in-cabin inference]({{ '/projects/2_fms/' | relative_url }})
+<strong>Related</strong> — [Error-pixel detection and recovery]({{ '/projects/11_pixelerror/' | relative_url }}) · [Camera soil detection]({{ '/projects/12_soil/' | relative_url }}) · [Autonomous-driving perception]({{ '/projects/8_perception/' | relative_url }})

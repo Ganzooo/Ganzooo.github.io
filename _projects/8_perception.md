@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Autonomous-Driving Perception on Automotive SoCs
-description: Segmentation, detection and sensor integrity, measured under the conditions the vehicle actually drives in.
+description: Segmentation, detection and traffic lights, measured under the conditions the vehicle actually drives in.
 img: assets/img/projects/seg_conditions.png
 importance: 1
 category: Perception
@@ -23,12 +23,6 @@ Beyond the public benchmark, I validated it on KETI's own 14-class driving datas
 **2D detection.** A YOLOv7 detector for emergency-vehicle and traffic-police perception, structurally pruned and deployed to a NextChip APACHE6 NPU.
 
 **Traffic lights.** ResNet and ResNet+LSTM classification with a detector and a SORT tracker, so the decision uses time as well as one frame. A light hidden behind a truck for a moment should not read as "off".
-
-**Sensor integrity.** Camera soil detection for surround-view lenses on NVIDIA Xavier, and error-pixel detection and recovery on TI TDA4VM.
-
-{% include figure.liquid loading="eager" path="assets/img/projects/soil_detection_result.png" class="img-fluid rounded z-depth-1" %}
-
-<div class="caption">Camera soil detection on a surround-view fisheye lens: input on the left, predicted soiled areas on the right. This is the failure the model exists to catch. The lens is dirty, the scene still looks reasonable, and nothing downstream would notice.</div>
 
 ## Result
 
@@ -56,9 +50,7 @@ Road and Car barely move. They are large and high-contrast, so the model has ple
 
 This is an uncomfortable result. The single mIoU number goes up fastest if you improve road and sky, which are already solved and cover the most pixels. Meanwhile the class whose failure actually matters gets worse underneath it. That is why I split the validation set by condition. A mixed set would have hidden this.
 
-The same reasoning is behind the sensor-integrity work. A perception stack that trusts a dirty lens does not fail loudly. It keeps giving confident output from bad input, and that is the hardest kind of failure to catch further down the system.
-
-Code: [Ganzooo/soil_segmentation](https://github.com/Ganzooo/soil_segmentation).
+The same reasoning drives the sensor-integrity work that grew out of this: [camera soil detection]({{ '/projects/12_soil/' | relative_url }}) and [error-pixel recovery]({{ '/projects/11_pixelerror/' | relative_url }}) both exist because a perception stack that trusts a degraded sensor does not fail loudly. It keeps giving confident output from bad input.
 
 ---
 
