@@ -3,8 +3,8 @@ layout: page
 title: QueryGaze - Gaze Estimation for Automotive Edge NPUs
 description: Reusing detection queries as gaze prompts, at 15M parameters.
 img: assets/img/projects/querygaze_arch.png
-importance: 3
-category: Research
+importance: 2
+category: In-cabin sensing
 related_publications: false
 ---
 
@@ -31,3 +31,9 @@ The backbone stays frozen. That keeps the number of trained parameters small and
 **How it was checked.** Multi-seed, placebo-controlled ablations, plus zero-shot evaluation on four gaze benchmarks. The placebo control is the important part. If you add a component and accuracy goes up, you have learned nothing until you also add a component that should do nothing and confirm it does nothing. Without that you are measuring seed variance and calling it a result.
 
 QueryGaze is the gaze component of the [UN-R171 driver-state monitoring system]({{ '/projects/1_dcas/' | relative_url }}).
+
+<span class="code-note">Code is not public; the paper is in preparation.</span>
+
+---
+
+<strong>Related</strong> — [Multi-camera in-cabin inference]({{ '/projects/2_fms/' | relative_url }})

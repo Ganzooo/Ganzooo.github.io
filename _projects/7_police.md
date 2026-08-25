@@ -3,8 +3,8 @@ layout: page
 title: Traffic-Police Gesture Recognition at a Control Tower
 description: A deployed edge system, not just a model.
 img: assets/img/projects/police_deployment.png
-importance: 7
-category: Automotive
+importance: 1
+category: Safe self-driving
 related_publications: true
 ---
 
@@ -30,3 +30,7 @@ Traffic-police hand signals override the normal traffic rules. A vehicle or road
 Real-time speed came from efficient frame buffering and cutting CPU work. I did not add an accelerator. On a deployment where the hardware is already installed and the budget is already spent, that is the whole problem. "It would be fast enough on better hardware" is not an answer.
 
 Code: [Ganzooo/yolov10_track_ros_gesture](https://github.com/Ganzooo/yolov10_track_ros_gesture), detection, tracking, classification and gesture recognition.
+
+---
+
+<strong>Related</strong> — [Autonomous-driving perception]({{ '/projects/8_perception/' | relative_url }}) · [Multi-camera in-cabin inference]({{ '/projects/2_fms/' | relative_url }})

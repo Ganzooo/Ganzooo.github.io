@@ -2,10 +2,10 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Selected work in efficient on-device AI and automotive perception.
+description: Selected work, in the order it happened.
 nav: true
 nav_order: 3
-display_categories: [Automotive, Research]
+display_categories: [Perception, Safe self-driving, In-cabin sensing, Efficiency]
 horizontal: true
 ---
 

@@ -32,5 +32,6 @@ module.exports = {
     /^card/,
     /^profile/,
     /^patent/,
+    /^code-note/,
   ],
 };

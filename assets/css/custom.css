@@ -149,3 +149,11 @@
   color: var(--global-text-color-light);
   font-variant-numeric: tabular-nums;
 }
+
+/* --- Small notes on a project page (code availability, related links) ----- */
+.code-note {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--global-text-color-light);
+  font-style: italic;
+}

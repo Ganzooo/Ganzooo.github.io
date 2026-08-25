@@ -3,8 +3,8 @@ layout: page
 title: Vision-Language Seat-State and Left-Object Detection
 description: Training a VLM for a task with almost no real labelled data.
 img: assets/img/projects/seat_left_object.jpg
-importance: 9
-category: Automotive
+importance: 4
+category: In-cabin sensing
 related_publications: false
 ---
 
@@ -36,3 +36,9 @@ A shared or fleet car has to know the state of each seat between trips: is it cl
 **Two findings I want to state plainly.** Distillation helped the output format more than the accuracy. The student's real gain was producing well-formed structured output every time, and it was only slightly more correct. And a simple CLIP linear probe beat the distilled student on the stage-1 routing decision. So the VLM earns its place on telling subtypes apart and giving a readable justification, and it is worth being clear about which part of a pipeline a large model is actually paying for.
 
 One caveat for production. In this form the VLM needs several GB of VRAM on top of the detection, pose and action models already running, and it has no INT8 export path yet. As it stands it is not ready for the embedded board.
+
+<span class="code-note">Programme code is not public.</span>
+
+---
+
+<strong>Related</strong> — [Multi-camera in-cabin inference]({{ '/projects/2_fms/' | relative_url }}) · [On-device VLM for AIGC detection]({{ '/projects/4_lpcvc/' | relative_url }})

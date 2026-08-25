@@ -3,8 +3,8 @@ layout: page
 title: Autonomous-Driving Perception on Automotive SoCs
 description: Segmentation, detection and sensor integrity, measured under the conditions the vehicle actually drives in.
 img: assets/img/projects/seg_conditions.png
-importance: 8
-category: Automotive
+importance: 1
+category: Perception
 related_publications: true
 ---
 
@@ -59,3 +59,7 @@ This is an uncomfortable result. The single mIoU number goes up fastest if you i
 The same reasoning is behind the sensor-integrity work. A perception stack that trusts a dirty lens does not fail loudly. It keeps giving confident output from bad input, and that is the hardest kind of failure to catch further down the system.
 
 Code: [Ganzooo/soil_segmentation](https://github.com/Ganzooo/soil_segmentation).
+
+---
+
+<strong>Related</strong> — [Traffic-police gesture recognition]({{ '/projects/7_police/' | relative_url }}) · [Driver-state monitoring]({{ '/projects/1_dcas/' | relative_url }})

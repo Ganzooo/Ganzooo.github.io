@@ -3,8 +3,8 @@ layout: page
 title: Real-Time Super-Resolution on Edge NPUs
 description: Two first-place challenge solutions, and the reparameterization idea behind both.
 img: assets/img/projects/repconv.png
-importance: 5
-category: Research
+importance: 1
+category: Efficiency
 related_publications: true
 ---
 
@@ -35,3 +35,7 @@ The shared idea is reparameterization. You train with a wide multi-branch block,
 | Quantized SR | MAI 2025 @ CVPR             | **2nd place**                                                          |
 
 Code: [Ganzooo/LRSRN](https://github.com/Ganzooo/LRSRN), the lightweight real-time super-resolution network.
+
+---
+
+<strong>Related</strong> — [On-device LLM inference]({{ '/projects/6_llm/' | relative_url }}) · [Autonomous-driving perception]({{ '/projects/8_perception/' | relative_url }})

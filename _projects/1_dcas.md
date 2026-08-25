@@ -4,7 +4,7 @@ title: Driver-State Monitoring for UN-R171 DCAS
 description: Building the device a regulation names, to the standard that defines it.
 img: assets/img/projects/dcas_dashboard.png
 importance: 1
-category: Automotive
+category: In-cabin sensing
 related_publications: false
 ---
 
@@ -40,3 +40,9 @@ I also wrote the conformance mapping across UN-R171, GSR II, Euro NCAP and UN-R1
 A running system that outputs a driver state for every frame, with the full signal trace behind it. Eye-closure time, off-road gaze time and PERCLOS are each shown against their thresholds, so you can trace any state change back to the rule that caused it.
 
 Porting to Jetson AGX Orin and validation in a real vehicle come in later phases of the programme.
+
+<span class="code-note">Programme code is not public.</span>
+
+---
+
+<strong>Related</strong> — [QueryGaze, the gaze component]({{ '/projects/3_gaze/' | relative_url }}) · [Multi-camera in-cabin inference]({{ '/projects/2_fms/' | relative_url }})

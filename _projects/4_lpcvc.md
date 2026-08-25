@@ -3,8 +3,8 @@ layout: page
 title: On-Device VLM for AI-Generated Content Detection
 description: 1st place, LPCVC 2026 Track 3 - a vision-language detector inside a 500-token budget.
 img: assets/img/projects/lpcvc_two_stage.png
-importance: 4
-category: Research
+importance: 2
+category: Efficiency
 related_publications: false
 ---
 
@@ -36,3 +36,7 @@ I added an auxiliary classification head next to the generative output.
 - The auxiliary classification head added **+2.08 pp** on the 26,033-image Chameleon benchmark
 
 Code, LoRA adapter and training dataset are released: [Ganzooo/LPCVC2026-Track3-OptimAI-1st](https://github.com/Ganzooo/LPCVC2026-Track3-OptimAI-1st) (MIT).
+
+---
+
+<strong>Related</strong> — [Seat-state and left-object detection]({{ '/projects/9_seatstate/' | relative_url }}) · [On-device LLM inference]({{ '/projects/6_llm/' | relative_url }})

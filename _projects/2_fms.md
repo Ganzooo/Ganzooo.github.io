@@ -3,8 +3,8 @@ layout: page
 title: Multi-Camera In-Cabin Inference System
 description: Four cameras, one embedded board, a fixed 10 Hz contract.
 img: assets/img/projects/fms_pipeline.png
-importance: 2
-category: Automotive
+importance: 3
+category: In-cabin sensing
 related_publications: false
 ---
 
@@ -33,3 +33,9 @@ The buffer stage is what makes per-seat classification work. You cannot tell "pu
 - **TensorRT FP16 cut in-cabin inference from 14.44 ms to 9.59 ms per frame**, which kept the 10 Hz schedule.
 - The converted engine gave the same answer as PyTorch on **all 120 seat-state cases**. A conversion that changes answers is a bug, so this check had to pass before deployment.
 - **Mixed precision, decided by measurement.** INT8 was fine for detection: it changed zero labels across the evaluation set. Pose stayed at FP16, because INT8 there gave a **38x keypoint coordinate error**. The same quantization choice was right for one stage and badly wrong for the next. That is why I measured each stage separately.
+
+<span class="code-note">Programme code is not public.</span>
+
+---
+
+<strong>Related</strong> — [Driver-state monitoring]({{ '/projects/1_dcas/' | relative_url }}) · [Seat-state and left-object detection]({{ '/projects/9_seatstate/' | relative_url }})

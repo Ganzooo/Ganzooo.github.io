@@ -3,8 +3,8 @@ layout: page
 title: On-Device LLM Inference
 description: LLaMA, Qwen and DeepSeek on a Raspberry Pi 4, at half the latency.
 img: assets/img/projects/llm_results.png
-importance: 6
-category: Research
+importance: 3
+category: Efficiency
 related_publications: true
 ---
 
@@ -29,3 +29,7 @@ I built a lightweight INT8 (LiteRT) inference pipeline for LLaMA-3.2, Qwen and D
 Published at ICCV Workshop 2025.
 
 The power number matters more than it looks. On edge devices, faster inference often comes from working the hardware harder, which shows up as heat and throttling once the workload runs for a while. Getting latency and power to move in the same direction means the gain survives past the first few seconds.
+
+---
+
+<strong>Related</strong> — [Real-time super-resolution]({{ '/projects/5_sr/' | relative_url }}) · [On-device VLM for AIGC detection]({{ '/projects/4_lpcvc/' | relative_url }})
