@@ -18,9 +18,17 @@ Traffic-police hand signals override the normal traffic rules. A vehicle or road
 
 **The system** is the deployed inference pipeline, which I designed: camera ingest through a ROS 2 package, on-site inference on an edge compute box at a traffic control tower, and results published to other systems over an API.
 
+{% include figure.liquid loading="eager" path="assets/img/projects/police_actionnet.png" class="img-fluid rounded" %}
+
+<div class="caption">The lightweight action network: a 32-frame sequence goes through a ResNet18 feature extractor, and an LSTM classifies the sequence. This is the earlier variant of the model, sized to fit the edge box.</div>
+
 {% include figure.liquid loading="eager" path="assets/img/projects/police_deployment.svg" class="img-fluid rounded" %}
 
 <div class="caption">The deployed path: camera to ROS 2 ingest, inference on an edge box installed at the control tower, and the recognised gesture published to other systems over an API.</div>
+
+{% include figure.liquid loading="eager" path="assets/img/projects/police_results.jpg" class="img-fluid rounded z-depth-1" %}
+
+<div class="caption">Deployed output on Korean roads. Left: an officer detected and classified as Traffic_Police, with the gesture read from the frame sequence. Right: the same camera detecting an ambulance alongside cars, traffic signs and traffic lights. The officer's face is blurred here for publication only.</div>
 
 ## Result
 
