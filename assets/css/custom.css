@@ -28,8 +28,10 @@
 /* --- "news" heading on the about page --------------------------------------
    Hardcoded lowercase in the theme layout; capitalize it in CSS rather than
    shadowing the whole layout file. */
-.profile-about h2,
-.post > h2 {
+/* The theme's own headings ("news", "selected publications") carry no id;
+   kramdown gives every markdown heading one, so :not([id]) hits exactly the
+   two hardcoded lowercase ones and leaves my own headings alone. */
+.post h2:not([id]) {
   text-transform: capitalize;
 }
 
