@@ -1,46 +1,53 @@
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1180 510' width='1180' height='510' font-family='-apple-system, BlinkMacSystemFont, SF Pro Display, Helvetica Neue, Helvetica, Arial, sans-serif'>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1180 630' width='1180' height='630' font-family='-apple-system, BlinkMacSystemFont, SF Pro Display, Helvetica Neue, Helvetica, Arial, sans-serif'>
 <defs><filter id='sh' x='-25%' y='-25%' width='150%' height='160%'><feDropShadow dx='0' dy='2' stdDeviation='6' flood-color='#000' flood-opacity='0.07'/><feDropShadow dx='0' dy='10' stdDeviation='22' flood-color='#000' flood-opacity='0.05'/></filter><filter id='sh2' x='-50%' y='-50%' width='200%' height='200%'><feDropShadow dx='0' dy='3' stdDeviation='9' flood-color='#000' flood-opacity='0.10'/></filter></defs>
-<rect width='1180' height='510' fill='#F5F5F7'/>
-<style>.pill{font-size:12px;font-weight:600;letter-spacing:.02em}.nm{font-size:20px;font-weight:600;letter-spacing:-.02em;fill:#1D1D1F}.s{font-size:13px;fill:#6E6E73}.yr{font-size:11.5px;font-weight:600;letter-spacing:.08em;fill:#86868B}.bh{font-size:17px;font-weight:600;letter-spacing:-.01em;fill:#1D1D1F}.bs{font-size:13px;fill:#6E6E73}.ms{font-size:13.5px;font-weight:600;fill:#1D1D1F}.mss{font-size:12px;fill:#6E6E73}.cap{font-size:12.5px;fill:#86868B}</style>
-<text class='yr' x='80' y='78'>2020</text>
-<rect x='56' y='104' width='268' height='170' rx='20' fill='#FFFFFF' filter='url(#sh)'/>
-<rect x='80' y='128' width='102.0' height='26' rx='13' fill='rgba(0,113,227,0.12)'/>
-<text class='pill' x='131.0' y='145' text-anchor='middle' fill='#0071E3'>PERCEPTION</text>
-<text class='nm' x='80' y='190'>Outward-facing</text>
-<text class='s' x='80' y='218'>2D detection, segmentation</text>
-<text class='s' x='80' y='238'>and traffic lights, on</text>
-<text class='s' x='80' y='258'>automotive SoCs</text>
-<text class='yr' x='520' y='78'>CURRENT</text>
-<rect x='496' y='104' width='268' height='170' rx='20' fill='#FFFFFF' filter='url(#sh)'/>
-<rect x='520' y='128' width='86.8' height='26' rx='13' fill='rgba(52,199,89,0.12)'/>
-<text class='pill' x='563.4' y='145' text-anchor='middle' fill='#34C759'>IN-CABIN</text>
-<text class='nm' x='520' y='190'>Inside the vehicle</text>
-<text class='s' x='520' y='218'>driver state to UN-R171,</text>
-<text class='s' x='520' y='238'>four-camera occupant</text>
-<text class='s' x='520' y='258'>recognition at 10 Hz</text>
-<text class='yr' x='880' y='78'>NEXT</text>
-<rect x='856' y='104' width='268' height='170' rx='20' fill='#FFFFFF' filter='url(#sh)'/>
-<rect x='880' y='128' width='48.8' height='26' rx='13' fill='rgba(175,82,222,0.12)'/>
-<text class='pill' x='904.4' y='145' text-anchor='middle' fill='#AF52DE'>VLA</text>
-<text class='nm' x='880' y='190'>Vision-language-action</text>
-<text class='s' x='880' y='218'>perception to decision</text>
-<path d='M340 189.0 L362 189.0' stroke='#D2D2D7' stroke-width='2' stroke-linecap='round'/>
-<path d='M458 189.0 L480 189.0' stroke='#D2D2D7' stroke-width='2' stroke-linecap='round'/>
-<circle cx='410' cy='189.0' r='34' fill='#FFFFFF' filter='url(#sh2)'/>
-<circle cx='410' cy='189.0' r='34' fill='rgba(199,149,43,0.11)'/>
-<text x='410' y='199.0' text-anchor='middle' font-size='27' fill='#C7952B'>★</text>
-<text class='ms' x='410' y='251.0' text-anchor='middle'>Test-driving</text>
-<text class='ms' x='410' y='269.0' text-anchor='middle'>licence</text>
-<text class='mss' x='410' y='289.0' text-anchor='middle'>on the road</text>
-<path d='M780 189.0 L840 189.0' stroke='#D2D2D7' stroke-width='2' stroke-dasharray='1 8' stroke-linecap='round'/>
-<rect x='56' y='364' width='1068' height='96' rx='20' fill='#FFFFFF' filter='url(#sh)'/>
-<rect x='80' y='388' width='168' height='26' rx='13' fill='rgba(255,149,0,0.14)'/>
-<text class='pill' x='164' y='405' text-anchor='middle' fill='#B26A00'>RUNS UNDERNEATH</text>
-<text class='bh' x='268' y='407'>Efficient on-device deployment</text>
-<text class='bs' x='80' y='438'>INT8 quantization · RepConv reparameterization · structural pruning · TensorRT / ONNX / LiteRT</text>
-<text class='bs' x='1100' y='438' text-anchor='end'>5 challenge placements</text>
-<path d='M190.0 282 L190.0 356' stroke='#D2D2D7' stroke-width='1.5' stroke-dasharray='1 7' stroke-linecap='round'/>
-<path d='M630.0 282 L630.0 356' stroke='#D2D2D7' stroke-width='1.5' stroke-dasharray='1 7' stroke-linecap='round'/>
-<path d='M990.0 282 L990.0 356' stroke='#D2D2D7' stroke-width='1.5' stroke-dasharray='1 7' stroke-linecap='round'/>
-<text class='cap' x='56' y='488'>Nearly all of it comes from one car. The efficiency work is what makes each model fit the compute the car has.</text>
+<rect width='1180' height='630' fill='#F5F5F7'/>
+<style>.pill{font-size:12px;font-weight:600;letter-spacing:.02em}.nm{font-size:19px;font-weight:600;letter-spacing:-.02em;fill:#1D1D1F}.s{font-size:13px;fill:#6E6E73}.yr{font-size:11.5px;font-weight:600;letter-spacing:.08em;fill:#86868B}.bh{font-size:17px;font-weight:600;letter-spacing:-.01em;fill:#1D1D1F}.bs{font-size:13px;fill:#6E6E73}.ms{font-size:13.5px;font-weight:600;fill:#1D1D1F}.mss{font-size:12px;fill:#6E6E73}.cap{font-size:12.5px;fill:#86868B}</style>
+<text class='yr' x='78' y='78'>2020 · ON THE CAR</text>
+<rect x='56' y='104' width='306' height='168' rx='20' fill='#FFFFFF' filter='url(#sh)'/>
+<rect x='78' y='126' width='102.0' height='26' rx='13' fill='rgba(0,113,227,0.12)'/>
+<text class='pill' x='129.0' y='143' text-anchor='middle' fill='#0071E3'>PERCEPTION</text>
+<text class='nm' x='78' y='186'>Outward-facing</text>
+<text class='s' x='78' y='214'>2D detection, semantic</text>
+<text class='s' x='78' y='234'>segmentation, traffic lights,</text>
+<text class='s' x='78' y='254'>3D detection on Apollo</text>
+<rect x='56' y='300' width='306' height='150' rx='20' fill='#FFFFFF' filter='url(#sh)'/>
+<rect x='78' y='322' width='71.6' height='26' rx='13' fill='rgba(0,160,160,0.12)'/>
+<text class='pill' x='113.8' y='339' text-anchor='middle' fill='#00A0A0'>SAFETY</text>
+<text class='nm' x='78' y='382'>Sensor integrity</text>
+<text class='s' x='78' y='410'>camera soil detection on Xavier</text>
+<text class='s' x='78' y='430'>error-pixel recovery on TDA4VM</text>
+<path d='M378 188.0 L404 188.0' stroke='#D2D2D7' stroke-width='2' stroke-linecap='round'/>
+<path d='M378 375.0 L446 375.0 L446 234.0' fill='none' stroke='#D2D2D7' stroke-width='2' stroke-linecap='round'/>
+<circle cx='452' cy='188.0' r='34' fill='#FFFFFF' filter='url(#sh2)'/>
+<circle cx='452' cy='188.0' r='34' fill='rgba(199,149,43,0.11)'/>
+<text x='452' y='198.0' text-anchor='middle' font-size='27' fill='#C7952B'>★</text>
+<text class='ms' x='452' y='124.0' text-anchor='middle'>Test-driving</text>
+<text class='ms' x='452' y='142.0' text-anchor='middle'>licence</text>
+<text class='mss' x='452' y='248.0' text-anchor='middle'>on the road</text>
+<text class='yr' x='562' y='78'>CURRENT · IN THE CABIN</text>
+<rect x='540' y='104' width='286' height='168' rx='20' fill='#FFFFFF' filter='url(#sh)'/>
+<rect x='562' y='126' width='86.8' height='26' rx='13' fill='rgba(52,199,89,0.12)'/>
+<text class='pill' x='605.4' y='143' text-anchor='middle' fill='#34C759'>IN-CABIN</text>
+<text class='nm' x='562' y='186'>Inside the vehicle</text>
+<text class='s' x='562' y='214'>driver state to UN-R171,</text>
+<text class='s' x='562' y='234'>four-camera occupant</text>
+<text class='s' x='562' y='254'>recognition at 10 Hz</text>
+<text class='yr' x='888' y='78'>NEXT</text>
+<rect x='866' y='104' width='258' height='168' rx='20' fill='#FFFFFF' filter='url(#sh)'/>
+<rect x='888' y='126' width='48.8' height='26' rx='13' fill='rgba(175,82,222,0.12)'/>
+<text class='pill' x='912.4' y='143' text-anchor='middle' fill='#AF52DE'>VLA</text>
+<text class='nm' x='888' y='186'>Vision-language-action</text>
+<text class='s' x='888' y='214'>perception to decision</text>
+<path d='M500 188.0 L524 188.0' stroke='#D2D2D7' stroke-width='2' stroke-linecap='round'/>
+<path d='M842 188.0 L850 188.0' stroke='#D2D2D7' stroke-width='2' stroke-dasharray='1 8' stroke-linecap='round'/>
+<rect x='56' y='478' width='1068' height='90' rx='20' fill='#FFFFFF' filter='url(#sh)'/>
+<rect x='80' y='500' width='168' height='26' rx='13' fill='rgba(255,149,0,0.14)'/>
+<text class='pill' x='164' y='517' text-anchor='middle' fill='#B26A00'>RUNS UNDERNEATH</text>
+<text class='bh' x='268' y='519'>Efficient on-device deployment</text>
+<text class='bs' x='80' y='548'>INT8 quantization · RepConv reparameterization · structural pruning · TensorRT / ONNX / LiteRT</text>
+<text class='bs' x='1100' y='548' text-anchor='end'>5 challenge placements</text>
+<path d='M209.0 458 L209.0 470' stroke='#D2D2D7' stroke-width='1.5' stroke-dasharray='1 7' stroke-linecap='round'/>
+<path d='M683.0 280 L683.0 470' stroke='#D2D2D7' stroke-width='1.5' stroke-dasharray='1 7' stroke-linecap='round'/>
+<path d='M995.0 280 L995.0 470' stroke='#D2D2D7' stroke-width='1.5' stroke-dasharray='1 7' stroke-linecap='round'/>
+<text class='cap' x='56' y='604'>Nearly all of it comes from one car. The efficiency work is what makes each model fit the compute the car has.</text>
 </svg>

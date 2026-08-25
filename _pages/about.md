@@ -40,7 +40,7 @@ Outside KETI I am part of **[Team Z6](https://teamz6.github.io/)**, a study grou
 
 {% include figure.liquid loading="eager" path="assets/img/projects/career_arc.svg" class="img-fluid rounded" %}
 
-<div class="caption">My work in one picture. Outside the car first, then the test-driving licence, then inside the cabin, and now VLA. The efficiency work at the bottom is used in all of them.</div>
+<div class="caption">My work in one picture. Two tracks on the car itself: recognition, and keeping the sensors trustworthy. Both fed into the test-driving licence. After that I moved inside the cabin, and VLA is next. The efficiency work at the bottom is used in all of them.</div>
 
 ## Research Interests
 
