@@ -26,11 +26,15 @@ latest_posts:
   limit: 3
 ---
 
-I am a computer-vision researcher at the **Korea Electronics Technology Institute (KETI)**, working on **efficient, on-device AI** — taking state-of-the-art vision and vision-language models and making them fit real latency, memory and power budgets on edge hardware.
+I am a computer-vision researcher at the **Korea Electronics Technology Institute (KETI)**, in the **perception team** of the autonomous-driving vehicle systems group. Nearly all of my work traces back to one vehicle.
 
-Most of my work sits at the point where a model has to leave the GPU: mobile and automotive NPUs (Qualcomm Hexagon/Snapdragon, NextChip, Synaptics), embedded ARM and automotive SoCs (TI TDA4VM, NVIDIA Jetson/Xavier), and Raspberry Pi. In practice that means INT8 post-training quantization, quantization-robust reparameterization, structural pruning, and TensorRT / ONNX / LiteRT deployment — and measuring what each of those choices actually costs.
+I started on the car's outward-facing perception — real-time semantic segmentation, 2D detection for emergency vehicles and traffic police, traffic-light recognition — all of it sized for the automotive SoCs the vehicle actually carries rather than for a workstation GPU. That work, together with 3D object detection on the Apollo platform, is what carried the team through to an **autonomous test-driving licence**: the point where the stack stopped being a research project and became a vehicle permitted to drive.
 
-At KETI I work in the **perception team** of the autonomous-driving vehicle systems group. I started on the vehicle's outward-facing perception — 2D object detection and semantic segmentation — then moved inward to in-cabin sensing, which is where most of my current work sits: driver-state monitoring and multi-camera occupant recognition. I am now beginning work on **vision-language-action (VLA)** models.
+Once the car could drive itself, the interesting question moved inside it. A vehicle that steers on your behalf has to establish that you are still engaged — and under UN-R171 that is a regulatory requirement, not a feature. That is where most of my current work sits: a **driver-state monitoring system** built to what Section 5.5.4 demands, with a six-rule Euro NCAP state machine, and a **four-camera occupant-recognition system** running on a single Jetson AGX Orin at a fixed 10 Hz.
+
+The efficiency work runs underneath all of it. Real-time super-resolution, on-device LLM inference, vision-language models inside a token budget — these are not a separate track. They are how a model that works in a lab ends up inside a car's compute envelope. The quantization and reparameterization methods that won those challenges are the same ones that put the in-cabin models onto an automotive NPU.
+
+I am now beginning work on **vision-language-action (VLA)** models — the step from a vehicle that perceives to one that decides.
 
 Separately from KETI, I am part of **[Team Z6](https://teamz6.github.io/)**, an independent study group working on efficient, on-device computer vision. The super-resolution challenge results below came out of that group.
 
@@ -45,8 +49,8 @@ Separately from KETI, I am part of **[Team Z6](https://teamz6.github.io/)**, an 
 
 ## Focus, in order
 
-- **Outward perception** — 2D object detection and semantic segmentation for the driving stack, deployed to automotive SoCs — [project]({{ '/projects/8_perception/' | relative_url }})
-- **In-cabin sensing** (current) — driver-state monitoring to UN-R171 Section 5.5.4 with a six-rule Euro NCAP state machine, and a four-camera occupant-recognition system on a single Jetson AGX Orin at a fixed 10 Hz — [driver state]({{ '/projects/1_dcas/' | relative_url }}) · [multi-camera]({{ '/projects/2_fms/' | relative_url }})
+- **Outward perception** — 2D detection and semantic segmentation on automotive SoCs; 3D detection on the Apollo platform toward the team's autonomous test-driving licence — [project]({{ '/projects/8_perception/' | relative_url }})
+- **In-cabin sensing** (current) — driver-state monitoring to UN-R171 Section 5.5.4, and four-camera occupant recognition at a fixed 10 Hz — [driver state]({{ '/projects/1_dcas/' | relative_url }}) · [multi-camera]({{ '/projects/2_fms/' | relative_url }})
 - **Vision-language-action** (starting) — early work on VLA models, building on the on-device vision-language work below
 
 ## Selected Awards
