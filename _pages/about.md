@@ -30,7 +30,9 @@ I am a computer-vision researcher at the **Korea Electronics Technology Institut
 
 I started on the outside of the car. I worked on real-time semantic segmentation, 2D detection for emergency vehicles and traffic police, and traffic-light recognition. All of it had to run on the automotive chips the car already has, not on a desktop GPU. That work, together with 3D object detection on the Apollo platform, helped our team get an **autonomous test-driving licence**. After that the car was allowed to drive on the road.
 
-Once the car was allowed on the road, safety became the focus: error-pixel recovery, camera soil detection, action recognition and emergency-vehicle detection. After that I moved inside the cabin, and that is where most of my work is now. UN-R171 says a car that steers for you must check that you are still paying attention. I built a **driver-state monitoring system** for that rule, with a six-rule Euro NCAP state machine. I also built a **four-camera system** that recognises what each passenger is doing. It runs on one Jetson AGX Orin at 10 Hz.
+Once the car was on the road, safety became the focus. A dirty lens or a dead pixel does not matter much in a lab, but it matters when the car is driving in traffic. I worked on error-pixel recovery, camera soil detection, action recognition and emergency-vehicle detection.
+
+After that I moved inside the cabin, and that is where most of my work is now. UN-R171 says a car that steers for you must check that you are still paying attention. I built a **driver-state monitoring system** for that rule, with a six-rule Euro NCAP state machine. I also built a **four-camera system** that recognises what each passenger is doing. It runs on one Jetson AGX Orin at 10 Hz.
 
 I am now starting work on **vision-language-action (VLA)** models.
 
