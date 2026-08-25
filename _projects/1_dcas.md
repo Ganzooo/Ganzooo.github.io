@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Driver-State Monitoring for UN-R171 DCAS
-description: Building the device a regulation names, to the standard that defines it.
+description: Building the device a regulation names, and the gaze model inside it.
 img: assets/img/projects/dcas_dashboard.png
 importance: 1
 category: In-cabin sensing
@@ -47,6 +47,26 @@ I also wrote the conformance mapping across UN-R171, GSR II, Euro NCAP and UN-R1
 
 <div class="caption">Live driver-state output. The top overlay shows the signals for that frame: eye state, gaze zone, head pose. The strip below shows each Euro NCAP rule against its threshold. The banner shows the state those rules produce.</div>
 
+## The gaze model: QueryGaze
+
+Gaze zone is the signal the state machine leans on hardest, and it needs a model that can run on the vehicle. Accurate gaze-target models are built for servers: they are large, and they usually run one forward pass per person in the scene. Neither works on an automotive NPU.
+
+QueryGaze runs in a single pass. It reuses the DETR detection queries as gaze prompts for each person, on a frozen DINOv3 backbone. The queries already find each person, so I reuse them to condition that person's gaze prediction. One pass covers everyone in the frame.
+
+The backbone stays frozen. That keeps the number of trained parameters small and makes the model behave more predictably under quantization. It is deployed to an automotive edge NPU with ViT-aware INT8 quantization.
+
+{% include figure.liquid loading="eager" path="assets/img/projects/querygaze_arch.svg" class="img-fluid rounded" %}
+
+<div class="caption">The detection queries that already locate each person are reused to condition that person's gaze prediction, so one forward pass covers everyone in the frame. The DINOv3 backbone stays frozen, which keeps the trained parameter count small and the activation ranges predictable under INT8.</div>
+
+{% include figure.liquid loading="eager" path="assets/img/projects/querygaze_qualitative.jpg" class="img-fluid rounded z-depth-1" %}
+
+<div class="caption">QueryGaze on GazeFollow and ChildPlay. The green box is the head the model detected itself, the ray is the predicted gaze direction, and the bright region is the predicted gaze target.</div>
+
+**Results.** 0.956 GazeFollow AUC, above the 0.924 human benchmark. 15M parameters. Real time on-device.
+
+Checked with multi-seed, placebo-controlled ablations plus zero-shot evaluation on four gaze benchmarks. The placebo control is the important part. If you add a component and accuracy goes up, you have learned nothing until you also add a component that should do nothing and confirm it does nothing. Without that you are measuring seed variance and calling it a result.
+
 ## Result
 
 A running system that outputs a driver state for every frame, with the full signal trace behind it. Eye-closure time, off-road gaze time and PERCLOS are each shown against their thresholds, so you can trace any state change back to the rule that caused it.
@@ -57,4 +77,4 @@ Porting to Jetson AGX Orin and validation in a real vehicle come in later phases
 
 ---
 
-<strong>Related</strong> — [QueryGaze, the gaze component]({{ '/projects/3_gaze/' | relative_url }}) · [Multi-camera in-cabin inference]({{ '/projects/2_fms/' | relative_url }})
+<strong>Related</strong> — [Multi-camera in-cabin inference]({{ '/projects/2_fms/' | relative_url }}) · [Seat-state and left-object detection]({{ '/projects/9_seatstate/' | relative_url }})
