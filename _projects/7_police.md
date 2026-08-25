@@ -20,7 +20,7 @@ Traffic-police hand signals override the normal traffic rules. A vehicle or road
 
 {% include figure.liquid loading="eager" path="assets/img/projects/police_actionnet.png" class="img-fluid rounded" %}
 
-<div class="caption">The lightweight action network: a 32-frame sequence goes through a ResNet18 feature extractor, and an LSTM classifies the sequence. This is the earlier variant of the model, sized to fit the edge box.</div>
+<div class="caption">An earlier version of the action network, showing the shape of the problem: a 32-frame sequence goes through a ResNet18 feature extractor and an LSTM classifies the sequence. The deployed model keeps that sequence-in, action-out structure but replaces the LSTM with a Linear Transformer and adds the keypoint branch alongside appearance.</div>
 
 {% include figure.liquid loading="eager" path="assets/img/projects/police_deployment.svg" class="img-fluid rounded" %}
 
