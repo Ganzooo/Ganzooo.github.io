@@ -10,29 +10,29 @@ related_publications: false
 
 ## Why it is needed
 
-A shared or fleet vehicle has to know the state of each seat between trips: is it clean, has something been left behind, is it soiled. The obstacle is not the model, it is the data. Real labelled in-cabin images of left objects and contamination are rare, and the long tail is enormous — every combination of item, position, lighting, upholstery and severity is a different picture.
+A shared or fleet car has to know the state of each seat between trips: is it clean, has someone left something behind, is it dirty. The problem is the data, not the model. Real labelled photos of left objects and dirty seats are rare, and the range of cases is huge. Every combination of item, position, lighting, seat material and severity is a different picture.
 
 ## What I did
 
-**Scaled the data instead of the model.** Built a procedural prompt library over an image-to-image API and generated training images from a small set of real photos, combining materials, lighting conditions, object types, object positions, contaminant types and severity levels under a fixed seed so the set is reproducible. That took the training data from a handful of real photos to over a thousand images.
+**I scaled the data instead of the model.** I built a prompt library over an image-to-image API and generated training images from a small set of real photos. It combines materials, lighting, object types, object positions, contaminant types and severity levels, with a fixed seed so the set can be reproduced. That took the training data from a handful of real photos to over a thousand images.
 
-**Distilled from a large teacher.** A Qwen2.5-VL-72B teacher labelled the synthetic set zero-shot; a Qwen2-VL-2B student was LoRA fine-tuned on those labels with a match-with-retry curation policy so disagreements were re-queried rather than silently accepted.
+**I distilled from a large teacher.** A Qwen2.5-VL-72B teacher labelled the synthetic set zero-shot. A Qwen2-VL-2B student was LoRA fine-tuned on those labels, with a match-with-retry policy so disagreements were asked again instead of being accepted quietly.
 
-**Split the task in two.** Stage 1 takes the image and produces an analysis in free text plus a seat-status line. Stage 2 takes only that text and produces structured JSON — five evidence items, a subtype, and a confidence. Stage 2 never re-encodes the image, which removes a second vision pass and leaves Stage 1's description as a reviewable intermediate.
-
-{% include figure.liquid loading="eager" path="assets/img/projects/seat_left_object.jpg" class="img-fluid rounded z-depth-1" %}
-
-<div class="caption">A left-object case from the in-cabin camera. The interesting part of this task is that the object is unremarkable — the model has to notice that something is present that should not be, not classify what it is.</div>
+**I split the task in two.** Stage 1 takes the image and writes an analysis in plain text plus a seat-status line. Stage 2 takes only that text and produces structured JSON: five evidence items, a subtype, and a confidence. Stage 2 never looks at the image again, so there is no second vision pass, and Stage 1's description stays readable.
 
 {% include figure.liquid loading="eager" path="assets/img/projects/seatstate_pipeline.svg" class="img-fluid rounded" %}
 
-<div class="caption">Real photographs are the scarce resource, so the pipeline manufactures data from them and distills the labels from a large teacher onto a small student.</div>
+<div class="caption">Real photographs are the scarce resource, so the pipeline makes more data from them and distills the labels from a large teacher onto a small student.</div>
+
+{% include figure.liquid loading="eager" path="assets/img/projects/seat_left_object.jpg" class="img-fluid rounded z-depth-1" %}
+
+<div class="caption">A left-object case from the in-cabin camera. What makes this task hard is that the object is ordinary. The model has to notice that something is there which should not be, and it does not need to say what it is.</div>
 
 ## Result
 
-- Training data scaled roughly **200x** from the real photographs available
-- The two-stage split made the structured output far more reliable than a single image-to-JSON pass
+- Training data scaled about **200x** from the real photographs available
+- Splitting the task in two made the structured output much more reliable than one image-to-JSON pass
 
-**Two findings worth stating plainly.** Distillation helped output _format_ stability more than it helped accuracy — the student's gain was in producing well-formed structured output consistently, not in being much more correct. And a simple CLIP linear probe beat the distilled student on the first-stage routing decision. The VLM earns its place on subtype discrimination and on producing a readable justification, not on raw routing accuracy, and it is worth being explicit about which part of a pipeline a large model is actually paying for.
+**Two findings I want to state plainly.** Distillation helped the output format more than the accuracy. The student's real gain was producing well-formed structured output every time, and it was only slightly more correct. And a simple CLIP linear probe beat the distilled student on the stage-1 routing decision. So the VLM earns its place on telling subtypes apart and giving a readable justification, and it is worth being clear about which part of a pipeline a large model is actually paying for.
 
-A production caveat: in this form the VLM needs several GB of VRAM on top of the detection, pose and action models already running, and it has no INT8 export path yet. It is not embedded-ready as it stands.
+One caveat for production. In this form the VLM needs several GB of VRAM on top of the detection, pose and action models already running, and it has no INT8 export path yet. As it stands it is not ready for the embedded board.

@@ -10,26 +10,26 @@ related_publications: false
 
 ## Why it is needed
 
-A fleet operator needs to know what every occupant is doing — seatbelt on, boarding, eating, asleep — per seat, continuously. The constraint is that this has to happen on one board already installed in the vehicle, on a cadence the downstream controller can rely on. A system that averages 10 Hz but stalls occasionally is not usable; the contract is the point.
+A fleet operator needs to know what every passenger is doing, seat by seat, all the time. Seatbelt on, getting in, eating, asleep. The hard part is that this has to run on one board already fitted in the car, and it has to send results on a fixed schedule. A system that averages 10 Hz but stops sometimes is no use. The schedule is the requirement.
 
 ## What I did
 
-Designed and built the deployed inference system for a national fleet-management R&D programme (TRL 4 to 7).
+I designed and built the deployed inference system for a national fleet-management R&D programme (TRL 4 to 7).
 
-**The shape of it:** four in-cabin cameras publish to four ROS 2 topics on a single **NVIDIA Jetson AGX Orin 64GB**, which sends one 10 Hz JSON stream to the vehicle's occupant-monitoring controller over TCP. It covers ten classes per seat — five actions, five states — for up to five simultaneous occupants.
+Four in-cabin cameras publish to four ROS 2 topics on one **NVIDIA Jetson AGX Orin 64GB**. The board sends one 10 Hz JSON stream to the car's occupant-monitoring controller over TCP. It covers ten classes per seat, five actions and five states, for up to five people at once.
 
 {% include figure.liquid loading="eager" path="assets/img/projects/fms_pipeline.svg" class="img-fluid rounded" %}
 
-<div class="caption">Per-frame path: detection and tracking give each occupant a stable per-seat identity, a circular buffer accumulates that person's recent frames, and the action model classifies appearance and keypoints together.</div>
+<div class="caption">The path for each frame. Detection and tracking give every passenger a stable ID for their seat. A buffer collects that person's recent frames. The action model then reads appearance and keypoints together.</div>
 
-The buffer stage is what makes per-seat classification work at all. Classifying a single frame cannot distinguish "putting a seatbelt on" from "taking it off"; both need a time window, and the window has to follow the person rather than the seat, because occupants move.
+The buffer stage is what makes per-seat classification work. You cannot tell "putting a seatbelt on" from "taking it off" in a single frame. Both need a time window, and the window has to follow the person, because people move between seats.
 
 {% include figure.liquid loading="eager" path="assets/img/projects/fms_action_result.jpg" class="img-fluid rounded z-depth-1" %}
 
-<div class="caption">Per-occupant output on an IR frame: a stable track ID, the pose keypoints feeding the keypoint branch, and the classified action with its confidence. The subject's face is blurred here; it is not blurred in the system itself.</div>
+<div class="caption">Output for one passenger on an IR frame: a stable track ID, the pose keypoints that feed the keypoint branch, and the action with its confidence. The face is blurred here for publication only. The system does not blur it.</div>
 
 ## Result
 
-- **TensorRT FP16 conversion cut in-cabin inference from 14.44 ms to 9.59 ms per frame**, holding the 10 Hz contract.
-- The converted engine matched the PyTorch results on **all 120 seat-state cases**. A conversion that changes answers is not an optimisation, so this parity check gated the deployment.
-- **Mixed precision, set by measurement rather than policy:** INT8 was accepted for detection, where it changed zero labels across the evaluation set. Pose stayed at FP16, because INT8 there produced a **38x keypoint coordinate error**. The same quantization decision was correct for one stage and badly wrong for the next — which is the argument for measuring per stage instead of quantizing the whole graph uniformly.
+- **TensorRT FP16 cut in-cabin inference from 14.44 ms to 9.59 ms per frame**, which kept the 10 Hz schedule.
+- The converted engine gave the same answer as PyTorch on **all 120 seat-state cases**. A conversion that changes answers is a bug, so this check had to pass before deployment.
+- **Mixed precision, decided by measurement.** INT8 was fine for detection: it changed zero labels across the evaluation set. Pose stayed at FP16, because INT8 there gave a **38x keypoint coordinate error**. The same quantization choice was right for one stage and badly wrong for the next. That is why I measured each stage separately.
