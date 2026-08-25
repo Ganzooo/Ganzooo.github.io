@@ -26,21 +26,21 @@ latest_posts:
   limit: 3
 ---
 
-I am a computer-vision researcher at the **Korea Electronics Technology Institute (KETI)**, in the **perception team** of the autonomous-driving vehicle systems group. Nearly all of my work traces back to one vehicle.
+I am a computer-vision researcher at the **Korea Electronics Technology Institute (KETI)**. I work in the **perception team** of the autonomous-driving vehicle systems group, and most of my projects come from that one car.
 
-I started on the car's outward-facing perception — real-time semantic segmentation, 2D detection for emergency vehicles and traffic police, traffic-light recognition — all of it sized for the automotive SoCs the vehicle actually carries rather than for a workstation GPU. That work, together with 3D object detection on the Apollo platform, is what carried the team through to an **autonomous test-driving licence**: the point where the stack stopped being a research project and became a vehicle permitted to drive.
+I started on the outside of the car. I worked on real-time semantic segmentation, 2D detection for emergency vehicles and traffic police, and traffic-light recognition. All of it had to run on the automotive chips the car already has, not on a desktop GPU. That work, together with 3D object detection on the Apollo platform, helped our team get an **autonomous test-driving licence**. After that the car was allowed to drive on the road.
 
-Once the car could drive itself, the interesting question moved inside it. A vehicle that steers on your behalf has to establish that you are still engaged — and under UN-R171 that is a regulatory requirement, not a feature. That is where most of my current work sits: a **driver-state monitoring system** built to what Section 5.5.4 demands, with a six-rule Euro NCAP state machine, and a **four-camera occupant-recognition system** running on a single Jetson AGX Orin at a fixed 10 Hz.
+Then I moved inside the cabin, and that is where most of my work is now. UN-R171 says a car that steers for you must check that you are still paying attention. I built a **driver-state monitoring system** for that rule, with a six-rule Euro NCAP state machine. I also built a **four-camera system** that recognises what each passenger is doing. It runs on one Jetson AGX Orin at 10 Hz.
 
-The efficiency work runs underneath all of it. Real-time super-resolution, on-device LLM inference, vision-language models inside a token budget — these are not a separate track. They are how a model that works in a lab ends up inside a car's compute envelope. The quantization and reparameterization methods that won those challenges are the same ones that put the in-cabin models onto an automotive NPU.
+I am now starting work on **vision-language-action (VLA)** models.
 
-I am now beginning work on **vision-language-action (VLA)** models — the step from a vehicle that perceives to one that decides.
+Efficiency is part of every one of these projects. I use INT8 quantization, reparameterization, structural pruning, and TensorRT / ONNX / LiteRT so a model fits the compute budget the car actually has. The same methods won five international efficiency challenges.
 
-Separately from KETI, I am part of **[Team Z6](https://teamz6.github.io/)**, an independent study group working on efficient, on-device computer vision. The super-resolution challenge results below came out of that group.
+Outside KETI I am part of **[Team Z6](https://teamz6.github.io/)**, a study group working on efficient on-device computer vision. The super-resolution results below came from that group.
 
 {% include figure.liquid loading="eager" path="assets/img/projects/career_arc.svg" class="img-fluid rounded" %}
 
-<div class="caption">The work in one picture: outward-facing perception, the test-driving licence it led to, the move inside the vehicle, and the start of vision-language-action work - with the efficiency layer that makes each of them deployable running underneath.</div>
+<div class="caption">My work in one picture. Outside the car first, then the test-driving licence, then inside the cabin, and now VLA. The efficiency work at the bottom is used in all of them.</div>
 
 ## Research Interests
 
