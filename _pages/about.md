@@ -30,7 +30,7 @@ I am a computer-vision researcher at the **Korea Electronics Technology Institut
 
 I started on the outside of the car. I worked on real-time semantic segmentation, 2D detection for emergency vehicles and traffic police, and traffic-light recognition. All of it had to run on the automotive chips the car already has, not on a desktop GPU. That work, together with 3D object detection on the Apollo platform, helped our team get an **autonomous test-driving licence**. After that the car was allowed to drive on the road.
 
-Then I moved inside the cabin, and that is where most of my work is now. UN-R171 says a car that steers for you must check that you are still paying attention. I built a **driver-state monitoring system** for that rule, with a six-rule Euro NCAP state machine. I also built a **four-camera system** that recognises what each passenger is doing. It runs on one Jetson AGX Orin at 10 Hz.
+Once the car was allowed on the road, safety became the focus: error-pixel recovery, camera soil detection, action recognition and emergency-vehicle detection. After that I moved inside the cabin, and that is where most of my work is now. UN-R171 says a car that steers for you must check that you are still paying attention. I built a **driver-state monitoring system** for that rule, with a six-rule Euro NCAP state machine. I also built a **four-camera system** that recognises what each passenger is doing. It runs on one Jetson AGX Orin at 10 Hz.
 
 I am now starting work on **vision-language-action (VLA)** models.
 
@@ -40,7 +40,7 @@ Outside KETI I am part of **[Team Z6](https://teamz6.github.io/)**, a study grou
 
 {% include figure.liquid loading="eager" path="assets/img/projects/career_arc.svg" class="img-fluid rounded" %}
 
-<div class="caption">My work in one picture. Two tracks on the car itself: recognition, and keeping the sensors trustworthy. Both fed into the test-driving licence. After that I moved inside the cabin, and VLA is next. The efficiency work at the bottom is used in all of them.</div>
+<div class="caption">My work in one picture. Outward perception first, then the test-driving licence, then the safety work needed once the car was on the road, then inside the cabin. VLA is next. The efficiency work at the bottom is used in all of them.</div>
 
 ## Research Interests
 
@@ -53,7 +53,8 @@ Outside KETI I am part of **[Team Z6](https://teamz6.github.io/)**, a study grou
 
 ## Focus, in order
 
-- **Outward perception** — 2D detection and semantic segmentation on automotive SoCs; 3D detection on the Apollo platform toward the team's autonomous test-driving licence — [project]({{ '/projects/8_perception/' | relative_url }})
+- **Outward perception** — 2D detection and semantic segmentation on automotive SoCs, 3D detection on the Apollo platform, which took the team to an autonomous test-driving licence — [project]({{ '/projects/8_perception/' | relative_url }})
+- **Safe self-driving** — once the car was on the road: error-pixel recovery, camera soil detection, action recognition and emergency-vehicle detection — [perception]({{ '/projects/8_perception/' | relative_url }}) · [gesture]({{ '/projects/7_police/' | relative_url }})
 - **In-cabin sensing** (current) — driver-state monitoring to UN-R171 Section 5.5.4, and four-camera occupant recognition at a fixed 10 Hz — [driver state]({{ '/projects/1_dcas/' | relative_url }}) · [multi-camera]({{ '/projects/2_fms/' | relative_url }})
 - **Vision-language-action** (starting) — early work on VLA models, building on the on-device vision-language work below
 
