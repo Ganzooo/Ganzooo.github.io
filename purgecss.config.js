@@ -31,5 +31,6 @@ module.exports = {
     /^category/,
     /^card/,
     /^profile/,
+    /^patent/,
   ],
 };

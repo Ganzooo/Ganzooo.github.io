@@ -99,3 +99,53 @@
   font-style: normal;
   color: var(--global-text-color);
 }
+
+/* --- Patents section at the foot of the Publications page -----------------
+   Styled to sit alongside jekyll-scholar's bibliography without pretending
+   to be one of its entries. */
+.patents-heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  margin-top: 2.6rem;
+  margin-bottom: 0.6rem;
+}
+.patent-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  counter-reset: patent;
+}
+.patent-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.15rem;
+  counter-increment: patent;
+}
+.patent-list li::before {
+  content: counter(patent);
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--global-text-color-light);
+}
+.patent-title {
+  display: block;
+  font-weight: 500;
+  line-height: 1.35;
+}
+.patent-meta {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--global-text-color-light);
+}
+.patent-id {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  font-variant-numeric: tabular-nums;
+}
