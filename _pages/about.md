@@ -38,6 +38,10 @@ I am now beginning work on **vision-language-action (VLA)** models — the step 
 
 Separately from KETI, I am part of **[Team Z6](https://teamz6.github.io/)**, an independent study group working on efficient, on-device computer vision. The super-resolution challenge results below came out of that group.
 
+{% include figure.liquid loading="eager" path="assets/img/projects/career_arc.svg" class="img-fluid rounded" %}
+
+<div class="caption">The work in one picture: outward-facing perception, the test-driving licence it led to, the move inside the vehicle, and the start of vision-language-action work - with the efficiency layer that makes each of them deployable running underneath.</div>
+
 ## Research Interests
 
 - Efficient on-device inference — quantization, pruning, reparameterization
