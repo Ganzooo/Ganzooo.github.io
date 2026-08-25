@@ -28,7 +28,8 @@
 /* --- "news" heading on the about page --------------------------------------
    Hardcoded lowercase in the theme layout; capitalize it in CSS rather than
    shadowing the whole layout file. */
-.post h2 > a[href$="/news/"] {
+.profile-about h2,
+.post > h2 {
   text-transform: capitalize;
 }
 

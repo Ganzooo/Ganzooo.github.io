@@ -28,12 +28,41 @@ latest_posts:
 
 I am a computer-vision researcher at the **Korea Electronics Technology Institute (KETI)**, working on **efficient, on-device AI** — taking state-of-the-art vision and vision-language models and making them fit real latency, memory and power budgets on edge hardware.
 
-Most of my work lives at the point where a model has to leave the GPU and run on something small: mobile and automotive NPUs (Qualcomm Hexagon/Snapdragon, NextChip, Synaptics), embedded ARM and automotive SoCs (TI TDA4VM, NVIDIA Jetson/Xavier), and Raspberry Pi. In practice that means INT8 post-training quantization, quantization-robust reparameterization, structural pruning, and TensorRT / ONNX / LiteRT deployment — and measuring what those choices actually cost.
+Most of my work sits at the point where a model has to leave the GPU: mobile and automotive NPUs (Qualcomm Hexagon/Snapdragon, NextChip, Synaptics), embedded ARM and automotive SoCs (TI TDA4VM, NVIDIA Jetson/Xavier), and Raspberry Pi. In practice that means INT8 post-training quantization, quantization-robust reparameterization, structural pruning, and TensorRT / ONNX / LiteRT deployment — and measuring what each of those choices actually costs.
 
-Two current projects: a **driver-state monitoring system** built to the requirement UN-R171 Section 5.5.4 sets for DCAS, with a six-rule Euro NCAP state machine; and a **multi-camera in-cabin inference system** running four cameras through ROS 2 on a single Jetson AGX Orin at a fixed 10 Hz.
+Separately from KETI, I am part of **[Team Z6](https://teamz6.github.io/)**, an independent study group working on efficient, on-device computer vision. The super-resolution challenge results below came out of that group.
 
-Before that I spent several years on autonomous-driving perception — real-time semantic segmentation, 2D and 3D detection, traffic-light recognition — and on real-time super-resolution, where our team took first place at **AIS 2024 (CVPR)** and **Mobile AI 2022 (ECCV)**. Most recently, first place in **LPCVC 2026 Track 3 (CVPR)** for on-device vision-language AI-generated-content detection under a hard token budget.
+## Research Interests
 
-Separately from my work at KETI, I am part of **[Team Z6](https://teamz6.github.io/)** — an independent study group working on efficient, on-device computer vision. The super-resolution challenge results above came out of that group rather than from institute work.
+- Efficient on-device inference — quantization, pruning, reparameterization
+- Vision-language models under hard token and memory budgets
+- Driver and occupant monitoring, to UN-R171 and Euro NCAP requirements
+- Autonomous-driving perception on automotive SoCs
+- Real-time super-resolution and image restoration
 
-I did my Ph.D. at Yonsei University (Image & Information Lab) and my M.S. at Konkuk University (VLSI Lab).
+## Current Work
+
+- **Driver-state monitoring** built to the requirement UN-R171 Section 5.5.4 sets for DCAS, with a six-rule Euro NCAP state machine — [project]({{ '/projects/1_dcas/' | relative_url }})
+- **Multi-camera in-cabin inference**, four cameras through ROS 2 on a single Jetson AGX Orin at a fixed 10 Hz — [project]({{ '/projects/2_fms/' | relative_url }})
+
+## Selected Awards
+
+- 🥇 **1st place**, LPCVC 2026 Track 3 @ CVPR — on-device vision-language AIGC detection
+- 🥇 **1st place**, AIS 2024 @ CVPR — real-time image super-resolution
+- 🥇 **1st place**, Mobile AI & AIM 2022 @ ECCV — real-time super-resolution (team leader)
+- 🥈 **2nd place**, MAI 2025 @ CVPR — quantized image super-resolution
+- 🥈 **2nd place**, AI Grand Challenge 2020, IITP — AI model optimization
+
+## Education
+
+- **Ph.D. in Electrical and Electronic Engineering**, Yonsei University (2011 – 2020) — Image & Information Lab
+- **M.S. in Electronics & Information Communication**, Konkuk University (2006 – 2009) — VLSI Lab
+- **B.S. in Information and Communication**, Huree University of ICT, Mongolia (2002 – 2006)
+
+## Experience
+
+- **Postdoctoral Researcher**, Korea Electronics Technology Institute (Jun 2018 – Present)
+- **Computer Vision Researcher**, Chowis Co., Ltd. (Nov 2016 – May 2018)
+- **Assistant Professor**, Huree University of ICT, Mongolia (Mar 2009 – Aug 2010)
+
+637 citations · h-index 10 · four U.S. patents (three granted)

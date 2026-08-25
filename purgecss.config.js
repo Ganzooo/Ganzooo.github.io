@@ -23,5 +23,13 @@ module.exports = {
     // and page chrome (scroll-progress bar, ToC) bleeds through a zoomed image.
     "medium-zoom-overlay",
     "medium-zoom-image--opened",
+    // Rules from assets/css/custom.css that PurgeCSS cannot match statically.
+    // Attribute selectors on generated hrefs are not resolved by the scanner,
+    // so without these the custom styling is silently dropped at deploy time.
+    /^periodical/,
+    /^more-info/,
+    /^category/,
+    /^card/,
+    /^profile/,
   ],
 };
