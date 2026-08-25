@@ -21,9 +21,21 @@ This is KETI's in-cabin track in a national SDV programme with nine institutions
 - **Specification.** I turned the UN-R171 Section 5.5.4 requirement into a spec we could test against: what to measure, at what threshold, over what time window.
 - **Dataset.** I chose the sensor setup and the capture scenarios, decided how to split train and eval, and collected the data.
 - **Method.** I proposed the signals: gaze zone, eye closure (EAR), PERCLOS, and head pose.
+
+{% include figure.liquid loading="eager" path="assets/img/projects/dcas_gaze_zone.png" class="img-fluid rounded" %}
+
+<div class="caption">Gaze zone is derived by binning head-pose yaw. The boundaries are per-vehicle and live in the calibration file, not in the code, so a different cabin geometry is a config change rather than a code change.</div>
 - **System.** I built the running pipeline, from the camera driver and ROS integration through to the output signals.
 
 Those four signals feed a six-rule Euro NCAP state machine. It puts the driver in one of four states: `NORMAL`, `DISTRACTED`, `DROWSY`, `UNRESPONSIVE`.
+
+{% include figure.liquid loading="eager" path="assets/img/projects/dcas_two_track.png" class="img-fluid rounded" %}
+
+<div class="caption">The two tracks that run on the in-cabin camera. Track 1 produces the Euro NCAP driver state; track 2 recognises what the driver is doing. Both start from the same frame.</div>
+
+{% include figure.liquid loading="eager" path="assets/img/projects/dcas_state_machine.png" class="img-fluid rounded" %}
+
+<div class="caption">The rules, with their thresholds. Escalation in red, recovery dashed. Eye-closed for 3s or PERCLOS above 80% over a 60s window gives DROWSY; 6s gives UNRESPONSIVE. Off-road gaze for 3s, or 10s summed over 30s, gives DISTRACTED. States are ordered, so the most serious condition wins.</div>
 
 ### One decision I want to explain
 
