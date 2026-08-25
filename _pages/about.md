@@ -34,7 +34,7 @@ Once the car was on the road, safety became the focus. A dirty lens or a dead pi
 
 After that I moved inside the cabin, and that is where most of my work is now. UN-R171 says a car that steers for you must check that you are still paying attention. I built a **driver-state monitoring system** for that rule, with a six-rule Euro NCAP state machine. I also built a **four-camera system** that recognises what each passenger is doing. It runs on one Jetson AGX Orin at 10 Hz.
 
-I am now starting work on **vision-language-action (VLA)** models.
+I am now starting work on **end-to-end self-driving with vision-language models (VLM)**, which brings me back to the driving task itself.
 
 Efficiency is part of every one of these projects. I use INT8 quantization, reparameterization, structural pruning, and TensorRT / ONNX / LiteRT so a model fits the compute budget the car actually has. The same methods won five international efficiency challenges.
 
@@ -42,13 +42,13 @@ Outside KETI I am part of **[Team Z6](https://teamz6.github.io/)**, a study grou
 
 {% include figure.liquid loading="eager" path="assets/img/projects/career_arc.svg" class="img-fluid rounded" %}
 
-<div class="caption">My work in one picture. Outward perception first, then the test-driving licence, then the safety work needed once the car was on the road, then inside the cabin. VLA is next. The efficiency work at the bottom is used in all of them.</div>
+<div class="caption">My work in one picture. Outward perception first, then the test-driving licence, then the safety work needed once the car was on the road, then inside the cabin. VLM-based end-to-end self-driving is next. The efficiency work at the bottom is used in all of them.</div>
 
 ## Research Interests
 
 - Efficient on-device inference — quantization, pruning, reparameterization
 - Vision-language models under hard token and memory budgets
-- Vision-language-action (VLA) models
+- End-to-end self-driving with vision-language models
 - Driver and occupant monitoring, to UN-R171 and Euro NCAP requirements
 - Autonomous-driving perception on automotive SoCs
 - Real-time super-resolution and image restoration
@@ -58,7 +58,7 @@ Outside KETI I am part of **[Team Z6](https://teamz6.github.io/)**, a study grou
 - **Outward perception** — 2D detection and semantic segmentation on automotive SoCs, 3D detection on the Apollo platform, which took the team to an autonomous test-driving licence — [project]({{ '/projects/8_perception/' | relative_url }})
 - **Safe self-driving** — once the car was on the road: error-pixel recovery, camera soil detection, action recognition and emergency-vehicle detection — [perception]({{ '/projects/8_perception/' | relative_url }}) · [gesture]({{ '/projects/7_police/' | relative_url }})
 - **In-cabin sensing** (current) — driver-state monitoring to UN-R171 Section 5.5.4, and four-camera occupant recognition at a fixed 10 Hz — [driver state]({{ '/projects/1_dcas/' | relative_url }}) · [multi-camera]({{ '/projects/2_fms/' | relative_url }})
-- **Vision-language-action** (starting) — early work on VLA models, building on the on-device vision-language work below
+- **VLM end-to-end self-driving** (starting) — vision-language models driving the car directly, building on the on-device vision-language work below
 
 ## Selected Awards
 
