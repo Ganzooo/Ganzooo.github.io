@@ -30,20 +30,24 @@ I am a computer-vision researcher at the **Korea Electronics Technology Institut
 
 Most of my work sits at the point where a model has to leave the GPU: mobile and automotive NPUs (Qualcomm Hexagon/Snapdragon, NextChip, Synaptics), embedded ARM and automotive SoCs (TI TDA4VM, NVIDIA Jetson/Xavier), and Raspberry Pi. In practice that means INT8 post-training quantization, quantization-robust reparameterization, structural pruning, and TensorRT / ONNX / LiteRT deployment — and measuring what each of those choices actually costs.
 
+At KETI I work in the **perception team** of the autonomous-driving vehicle systems group. I started on the vehicle's outward-facing perception — 2D object detection and semantic segmentation — then moved inward to in-cabin sensing, which is where most of my current work sits: driver-state monitoring and multi-camera occupant recognition. I am now beginning work on **vision-language-action (VLA)** models.
+
 Separately from KETI, I am part of **[Team Z6](https://teamz6.github.io/)**, an independent study group working on efficient, on-device computer vision. The super-resolution challenge results below came out of that group.
 
 ## Research Interests
 
 - Efficient on-device inference — quantization, pruning, reparameterization
 - Vision-language models under hard token and memory budgets
+- Vision-language-action (VLA) models
 - Driver and occupant monitoring, to UN-R171 and Euro NCAP requirements
 - Autonomous-driving perception on automotive SoCs
 - Real-time super-resolution and image restoration
 
-## Current Work
+## Focus, in order
 
-- **Driver-state monitoring** built to the requirement UN-R171 Section 5.5.4 sets for DCAS, with a six-rule Euro NCAP state machine — [project]({{ '/projects/1_dcas/' | relative_url }})
-- **Multi-camera in-cabin inference**, four cameras through ROS 2 on a single Jetson AGX Orin at a fixed 10 Hz — [project]({{ '/projects/2_fms/' | relative_url }})
+- **Outward perception** — 2D object detection and semantic segmentation for the driving stack, deployed to automotive SoCs — [project]({{ '/projects/8_perception/' | relative_url }})
+- **In-cabin sensing** (current) — driver-state monitoring to UN-R171 Section 5.5.4 with a six-rule Euro NCAP state machine, and a four-camera occupant-recognition system on a single Jetson AGX Orin at a fixed 10 Hz — [driver state]({{ '/projects/1_dcas/' | relative_url }}) · [multi-camera]({{ '/projects/2_fms/' | relative_url }})
+- **Vision-language-action** (starting) — early work on VLA models, building on the on-device vision-language work below
 
 ## Selected Awards
 
