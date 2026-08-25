@@ -18,9 +18,9 @@ Traffic-police hand signals override the normal traffic rules. A vehicle or road
 
 **The system** is the deployed inference pipeline, which I designed: camera ingest through a ROS 2 package, on-site inference on an edge compute box at a traffic control tower, and results published to other systems over an API.
 
-{% include figure.liquid loading="eager" path="assets/img/projects/police_actionnet.png" class="img-fluid rounded" %}
+{% include figure.liquid loading="eager" path="assets/img/projects/police_actionnet_v2.svg" class="img-fluid rounded" %}
 
-<div class="caption">An earlier version of the action network, showing the shape of the problem: a 32-frame sequence goes through a ResNet18 feature extractor and an LSTM classifies the sequence. The deployed model keeps that sequence-in, action-out structure but replaces the LSTM with a Linear Transformer and adds the keypoint branch alongside appearance.</div>
+<div class="caption">The deployed model. A sequence of frames around the tracked officer feeds two branches, appearance and pose keypoints, and a Linear Transformer reads both across the sequence to produce the gesture. An earlier version used ResNet18 with an LSTM.</div>
 
 {% include figure.liquid loading="eager" path="assets/img/projects/police_deployment.svg" class="img-fluid rounded" %}
 
