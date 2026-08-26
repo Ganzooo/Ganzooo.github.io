@@ -106,3 +106,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+          # Publish as a single commit. The deploy branch is a build artifact,
+          # not a record: keeping its history meant every past build - and every
+          # asset ever published, including ones later withdrawn - stayed
+          # retrievable from it after removal from the source branch.
+          single-commit: true
