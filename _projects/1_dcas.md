@@ -2,7 +2,7 @@
 layout: page
 title: Driver-State Monitoring for UN-R171 DCAS
 description: Building the device a regulation names, and the gaze model inside it.
-img: assets/img/projects/dcas_dashboard.png
+img: assets/img/projects/dcas_gaze_zone.png
 importance: 1
 category: In-cabin sensing
 related_publications: false
@@ -42,10 +42,6 @@ Those four signals feed a six-rule Euro NCAP state machine. It puts the driver i
 Every NCAP threshold lives in a config file. None of them are constants in the code. If you can only read a compliance rule by opening a Python file, nobody outside the team can audit it. Keeping the rule layer separate from the signal layer means the thresholds can be checked against the standard directly, and updated when the standard changes, without touching the recognition code.
 
 I also wrote the conformance mapping across UN-R171, GSR II, Euro NCAP and UN-R157. Doing that is how you find out that requirements which look the same are not. GSR II states its drowsiness criterion in KSS. This system measures PERCLOS. You cannot derive one from the other, and writing that down was more useful than quietly picking one.
-
-{% include figure.liquid loading="eager" path="assets/img/projects/dcas_dashboard.png" class="img-fluid rounded z-depth-1" %}
-
-<div class="caption">Live driver-state output. The top overlay shows the signals for that frame: eye state, gaze zone, head pose. The strip below shows each Euro NCAP rule against its threshold. The banner shows the state those rules produce.</div>
 
 ## The gaze model: QueryGaze
 
