@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 400" width="980" height="400" font-family="Helvetica,Arial,sans-serif">
+<style>.ax{font-size:11px;fill:#8b9098}.cl{font-size:12.5px;font-weight:600;fill:#1b1d22}.v{font-size:10.5px;font-weight:700;fill:#1b1d22}.lg{font-size:12px;fill:#4b5057}.ti{font-size:14px;font-weight:700;fill:#1b1d22}.su{font-size:11.5px;fill:#6b7280}</style>
+<text class="ti" x="64" y="26">Per-class IoU on the KETI dataset</text>
+<text class="su" x="64" y="45">Same model, three capture conditions</text>
+<rect x="64" y="58" width="11" height="11" rx="2.5" fill="#2a78d6"/>
+<text class="lg" x="81" y="68">Day</text>
+<rect x="136" y="58" width="11" height="11" rx="2.5" fill="#eb6834"/>
+<text class="lg" x="153" y="68">Night</text>
+<rect x="208" y="58" width="11" height="11" rx="2.5" fill="#1baf7a"/>
+<text class="lg" x="225" y="68">Rain</text>
+<path d="M64 258.5 L956 258.5" stroke="#e7e9ec" stroke-width="1"/>
+<text class="ax" x="55" y="262.5" text-anchor="end">0.25</text>
+<path d="M64 201.0 L956 201.0" stroke="#e7e9ec" stroke-width="1"/>
+<text class="ax" x="55" y="205.0" text-anchor="end">0.50</text>
+<path d="M64 143.5 L956 143.5" stroke="#e7e9ec" stroke-width="1"/>
+<text class="ax" x="55" y="147.5" text-anchor="end">0.75</text>
+<path d="M64 86.0 L956 86.0" stroke="#e7e9ec" stroke-width="1"/>
+<text class="ax" x="55" y="90.0" text-anchor="end">1.00</text>
+<path d="M96.2 316 L96.2 94.6 Q96.2 90.6 100.2 90.6 L126.19999999999999 90.6 Q130.2 90.6 130.2 94.6 L130.2 316 Z" fill="#2a78d6"/>
+<text class="v" x="113.2" y="84.6" text-anchor="middle">0.98</text>
+<path d="M136.2 316 L136.2 93.68 Q136.2 89.68 140.2 89.68 L166.2 89.68 Q170.2 89.68 170.2 93.68 L170.2 316 Z" fill="#eb6834"/>
+<text class="v" x="153.2" y="83.68" text-anchor="middle">0.98</text>
+<path d="M176.2 316 L176.2 92.75999999999999 Q176.2 88.75999999999999 180.2 88.75999999999999 L206.2 88.75999999999999 Q210.2 88.75999999999999 210.2 92.75999999999999 L210.2 316 Z" fill="#1baf7a"/>
+<text class="v" x="193.2" y="82.75999999999999" text-anchor="middle">0.99</text>
+<text class="cl" x="153.2" y="338" text-anchor="middle">Road</text>
+<path d="M274.6 316 L274.6 103.57000000000002 Q274.6 99.57000000000002 278.6 99.57000000000002 L304.6 99.57000000000002 Q308.6 99.57000000000002 308.6 103.57000000000002 L308.6 316 Z" fill="#2a78d6"/>
+<text class="v" x="291.6" y="93.57000000000002" text-anchor="middle">0.94</text>
+<path d="M314.6 316 L314.6 109.78 Q314.6 105.78 318.6 105.78 L344.6 105.78 Q348.6 105.78 348.6 109.78 L348.6 316 Z" fill="#eb6834"/>
+<text class="v" x="331.6" y="99.78" text-anchor="middle">0.91</text>
+<path d="M354.6 316 L354.6 100.12 Q354.6 96.12 358.6 96.12 L384.6 96.12 Q388.6 96.12 388.6 100.12 L388.6 316 Z" fill="#1baf7a"/>
+<text class="v" x="371.6" y="90.12" text-anchor="middle">0.96</text>
+<text class="cl" x="331.6" y="338" text-anchor="middle">Car</text>
+<path d="M453.0 316 L453.0 171.88 Q453.0 167.88 457.0 167.88 L483.0 167.88 Q487.0 167.88 487.0 171.88 L487.0 316 Z" fill="#2a78d6"/>
+<text class="v" x="470.0" y="161.88" text-anchor="middle">0.64</text>
+<path d="M493.0 316 L493.0 206.15 Q493.0 202.15 497.0 202.15 L523.0 202.15 Q527.0 202.15 527.0 206.15 L527.0 316 Z" fill="#eb6834"/>
+<text class="v" x="510.0" y="196.15" text-anchor="middle">0.49</text>
+<path d="M533.0 316 L533.0 158.77 Q533.0 154.77 537.0 154.77 L563.0 154.77 Q567.0 154.77 567.0 158.77 L567.0 316 Z" fill="#1baf7a"/>
+<text class="v" x="550.0" y="148.77" text-anchor="middle">0.70</text>
+<text class="cl" x="510.0" y="338" text-anchor="middle">Traffic light</text>
+<path d="M631.4000000000001 316 L631.4000000000001 176.71 Q631.4000000000001 172.71 635.4000000000001 172.71 L661.4000000000001 172.71 Q665.4000000000001 172.71 665.4000000000001 176.71 L665.4000000000001 316 Z" fill="#2a78d6"/>
+<text class="v" x="648.4000000000001" y="166.71" text-anchor="middle">0.62</text>
+<path d="M671.4000000000001 316 L671.4000000000001 207.99 Q671.4000000000001 203.99 675.4000000000001 203.99 L701.4000000000001 203.99 Q705.4000000000001 203.99 705.4000000000001 207.99 L705.4000000000001 316 Z" fill="#eb6834"/>
+<text class="v" x="688.4000000000001" y="197.99" text-anchor="middle">0.49</text>
+<path d="M711.4000000000001 316 L711.4000000000001 178.09 Q711.4000000000001 174.09 715.4000000000001 174.09 L741.4000000000001 174.09 Q745.4000000000001 174.09 745.4000000000001 178.09 L745.4000000000001 316 Z" fill="#1baf7a"/>
+<text class="v" x="728.4000000000001" y="168.09" text-anchor="middle">0.62</text>
+<text class="cl" x="688.4000000000001" y="338" text-anchor="middle">Pole</text>
+<path d="M809.8000000000001 316 L809.8000000000001 156.47 Q809.8000000000001 152.47 813.8000000000001 152.47 L839.8000000000001 152.47 Q843.8000000000001 152.47 843.8000000000001 156.47 L843.8000000000001 316 Z" fill="#2a78d6"/>
+<text class="v" x="826.8000000000001" y="146.47" text-anchor="middle">0.71</text>
+<path d="M849.8000000000001 316 L849.8000000000001 220.87 Q849.8000000000001 216.87 853.8000000000001 216.87 L879.8000000000001 216.87 Q883.8000000000001 216.87 883.8000000000001 220.87 L883.8000000000001 316 Z" fill="#eb6834"/>
+<text class="v" x="866.8000000000001" y="210.87" text-anchor="middle">0.43</text>
+<path d="M889.8000000000001 316 L889.8000000000001 215.81 Q889.8000000000001 211.81 893.8000000000001 211.81 L919.8000000000001 211.81 Q923.8000000000001 211.81 923.8000000000001 215.81 L923.8000000000001 316 Z" fill="#1baf7a"/>
+<text class="v" x="906.8000000000001" y="205.81" text-anchor="middle">0.45</text>
+<text class="cl" x="866.8000000000001" y="338" text-anchor="middle">Human</text>
+<path d="M64 316 L956 316" stroke="#c9ced6" stroke-width="1.2"/>
+<text class="su" x="64" y="378">Large, high-contrast classes barely move at night. The classes that collapse are the thin and small ones - and Human is the worst in both night and rain.</text>
+</svg>

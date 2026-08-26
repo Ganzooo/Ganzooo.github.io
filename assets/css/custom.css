@@ -1,0 +1,156 @@
+/* ---------------------------------------------------------------------------
+   Site overrides for al-folio.
+   Only additive rules live here; nothing in the theme is edited directly.
+   --------------------------------------------------------------------------- */
+
+/* --- Section headings on the projects page ---------------------------------
+   The theme renders these very large, right-aligned and near-white, which reads
+   as decoration rather than as structure. Make them a normal left-aligned label. */
+.projects h2.category {
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  opacity: 1;
+  margin: 2.6rem 0 1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+.projects h2.category:first-of-type {
+  margin-top: 1.6rem;
+}
+
+/* --- "news" heading on the about page --------------------------------------
+   Hardcoded lowercase in the theme layout; capitalize it in CSS rather than
+   shadowing the whole layout file. */
+/* The theme's own headings ("news", "selected publications") carry no id;
+   kramdown gives every markdown heading one, so :not([id]) hits exactly the
+   two hardcoded lowercase ones and leaves my own headings alone. */
+.post h2:not([id]) {
+  text-transform: capitalize;
+}
+
+/* --- Profile block ---------------------------------------------------------
+   more-info renders in a monospace face by default, which looks like output
+   rather than an address. */
+.profile .more-info {
+  font-family: inherit;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--global-text-color-light);
+}
+.profile img {
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Project cards ---------------------------------------------------------
+   Slightly calmer borders, and a lift on hover so the cards read as clickable. */
+.card {
+  border: 1px solid var(--global-divider-color);
+  box-shadow: none;
+  transition:
+    transform 0.14s ease,
+    box-shadow 0.14s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+.card .card-title {
+  font-size: 1.28rem;
+  line-height: 1.25;
+}
+.card .card-text {
+  color: var(--global-text-color-light);
+  font-size: 0.94rem;
+}
+
+/* --- Typography ------------------------------------------------------------ */
+.post-title {
+  letter-spacing: -0.015em;
+}
+.post-description {
+  color: var(--global-text-color-light);
+}
+.publications h2.bibliography {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--global-text-color-light);
+  margin-top: 2.2rem;
+}
+
+/* --- Authorship / status note on a publication -----------------------------
+   jekyll-scholar renders the `note` field into a second .periodical div, where
+   it looks identical to the venue line and disappears. Corresponding-author and
+   equal-contribution credit is the part a reader is scanning for, so give it an
+   accent rule and let it stand apart from the venue. */
+.publications .periodical + .periodical {
+  margin-top: 0.28rem;
+  padding-left: 0.55rem;
+  border-left: 2px solid var(--global-theme-color);
+  font-size: 0.86rem;
+  font-style: normal;
+  color: var(--global-text-color);
+}
+
+/* --- Patents section at the foot of the Publications page -----------------
+   Styled to sit alongside jekyll-scholar's bibliography without pretending
+   to be one of its entries. */
+.patents-heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  margin-top: 2.6rem;
+  margin-bottom: 0.6rem;
+}
+.patent-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  counter-reset: patent;
+}
+.patent-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.15rem;
+  counter-increment: patent;
+}
+.patent-list li::before {
+  content: counter(patent);
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--global-text-color-light);
+}
+.patent-title {
+  display: block;
+  font-weight: 500;
+  line-height: 1.35;
+}
+.patent-meta {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--global-text-color-light);
+}
+.patent-id {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Small notes on a project page (code availability, related links) ----- */
+.code-note {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--global-text-color-light);
+  font-style: italic;
+}
