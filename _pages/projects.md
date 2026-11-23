@@ -3,7 +3,7 @@ layout: page
 title: Projects
 permalink: /projects/
 description: Selected work, in the order it happened.
-nav: true
+nav: false
 nav_order: 3
 display_categories: [Perception, Safe self-driving, In-cabin sensing, Efficiency]
 horizontal: true
