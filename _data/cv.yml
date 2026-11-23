@@ -70,6 +70,8 @@ cv:
         end_date: 2006
 
     Awards:
+      - label: Best Paper Award
+        details: "Int. Conf. on ICT Convergence (ICTC) 2026, Main Track - in-cabin seat contamination and left-object detection with a compact vision-language model"
       - label: 1st Place, Track 3
         details: "Low-Power Computer Vision Challenge (LPCVC) 2026 @ CVPR - on-device vision-language AIGC detection, rubric 0.827 at 30.48 TPS"
       - label: Outstanding Employee Award

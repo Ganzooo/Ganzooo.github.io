@@ -62,6 +62,7 @@ Outside KETI I am part of **[Team Z6](https://teamz6.github.io/)**, a study grou
 
 ## Selected Awards
 
+- 🏆 **Best Paper Award**, ICTC 2026 — in-cabin seat contamination and left-object detection with a compact vision-language model
 - 🥇 **1st place**, LPCVC 2026 Track 3 @ CVPR — on-device vision-language AIGC detection
 - 🥇 **1st place**, AIS 2024 @ CVPR — real-time image super-resolution
 - 🥇 **1st place**, Mobile AI & AIM 2022 @ ECCV — real-time super-resolution (team leader)
