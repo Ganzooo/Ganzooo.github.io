@@ -9,14 +9,17 @@
 
 @article{gankhuyag2026latefusion,
   preview     = {gankhuyag2026latefusion.png},
-  abbr        = {Under review},
+  abbr        = {IEEE Access},
   bibtex_show = {true},
   title       = {Late-Fusion Dual-Path Inference: Architecture-Level Quantization Robustness for INT8 Action Recognition on Mobile NPUs},
-  author      = {Gankhuyag, Ganzorig and others},
-  journal     = {IEEE Access (under review)},
+  author      = {Gankhuyag, Ganzorig and Yoo, Jaewoong and Park, Jin-Man and Lee, Seonyoung and Son, Haengseon and Min, Kyoungwon},
+  journal     = {IEEE Access},
+  volume      = {14},
+  pages       = {154669--154685},
   year        = {2026},
+  doi         = {10.1109/ACCESS.2026.3740127},
   selected    = {false},
-  abstract    = {Architecture-level late fusion for two-branch INT8 ensembles, combining after softmax normalization rather than in logit space. Validated on a Qualcomm Hexagon NPU.}
+  abstract    = {Multi-branch video models raise action-recognition accuracy within a fixed latency budget, and mobile neural processing units (NPUs) commonly deploy them through INT8 post-training quantization (PTQ). Our results indicate that where such a model combines its branches, relative to the quantizer, affects whether it retains its accuracy. Feature-level fusion assigns one per-tensor INT8 scale to a concatenated activation. When the constituent dynamic ranges differ, the smaller-range pathway receives fewer effective levels. Late fusion combines per-branch logits after each branch is quantized independently, so the quantizer never sees a mixed tensor. On a Qualcomm Hexagon NPU under the vendor INT8 PTQ flow, a jointly fused SlowFast R50 falls from 93.13% to 10.04% top-1 on UCF101, while a refactored late-fusion configuration, which gives each pathway its own classifier and fine-tunes and quantizes it separately, reaches 90.30%. The collapse reproduces on Kinetics-400 using the released checkpoint (63.40% → 20.90%). A refactored-and-retrained late-fusion configuration reaches 61.60%, 40.70 points higher, from a slightly lower floating-point accuracy. Our deployed late-fusion dual-path R(2+1)D-18 runs in real time at 6.3–7.0 ms per clip within a 33 ms budget and improves top-1 over its best single branch by a small but statistically significant 0.19 points (McNemar p = 0.028, 11,484-clip validation split). Across five controlled measurements, the four classical combination rules are statistically indistinguishable on validation data, and on the deployment distribution softmax-sum leads logit-sum by only 0.062 points. Therefore, for the two-branch convolutional models studied here, where to fuse matters more for INT8 deployment than the late-fusion rule.}
 }
 
 @inproceedings{gankhuyag2026seat,
