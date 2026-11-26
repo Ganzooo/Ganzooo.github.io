@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101012">
+  <meta name="description" content="Өрнөл — AI богино киноны туршилтын сан. Жишээ бүтээлүүдийг үзэж, жагсаалтдаа хадгалаарай.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Өрнөл">
+  <meta property="og:title" content="Өрнөл · AI кино">
+  <meta property="og:description" content="Монгол интерфейстэй AI богино киноны туршилтын сан.">
+  <link rel="icon" type="image/svg+xml" href="assets/ornol.svg">
+  <link rel="stylesheet" href="styles.css">
+  <title>Өрнөл · AI кино</title>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Үндсэн хэсэгт очих</a>
+  <header class="site-header">
+    <div class="frame header-inner">
+      <a class="brand" href="#home" aria-label="Өрнөл, нүүр хуудас">
+        <img src="assets/ornol.svg" width="34" height="34" alt="">
+        <span>ӨРНӨЛ<span class="brand-period">.</span></span>
+      </a>
+      <nav id="top-nav" class="top-nav" aria-label="Үндсэн цэс"></nav>
+      <button id="open-search" class="search-trigger" type="button" aria-haspopup="dialog">
+        <span data-icon="search"></span>
+        <span class="search-label">Хайх</span>
+        <kbd class="search-key" aria-hidden="true">/</kbd>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1"></main>
+  <noscript><p class="frame noscript">Кино үзэхийн тулд хөтчийн JavaScript тохиргоог идэвхжүүлээрэй.</p></noscript>
+
+  <footer class="site-footer">
+    <div class="frame footer-inner">
+      <a class="brand brand-small" href="#home" aria-label="Өрнөл, нүүр хуудас">
+        <img src="assets/ornol.svg" width="24" height="24" alt="">
+        <span>ӨРНӨЛ<span class="brand-period">.</span></span>
+      </a>
+      <span>AI киноны туршилтын сан</span>
+      <a class="footer-link" href="#credits">Бичлэгийн эх сурвалж</a>
+    </div>
+  </footer>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Гар утасны цэс"></nav>
+  <dialog id="film-dialog" class="film-dialog" aria-labelledby="dialog-title"></dialog>
+  <dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title"></dialog>
+  <div id="notice" class="notice" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
