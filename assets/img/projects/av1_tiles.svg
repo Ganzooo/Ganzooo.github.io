@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 340" width="980" height="340" font-family="Helvetica,Arial,sans-serif">
+<style>.h{font-size:14px;font-weight:700;fill:#1b1d22}.s{font-size:11.5px;fill:#5d626b}.lbl{font-size:12px;font-weight:600;fill:#1b1d22}.note{font-size:12px;fill:#6b7280;font-style:italic}</style>
+<text class="h" x="60" y="64">Ordinary encoding</text>
+<text class="s" x="60" y="82">motion and filters cross tile edges</text>
+<rect x="60" y="90" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="164" y="90" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="268" y="90" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="60" y="164" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="164" y="164" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="268" y="164" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="60" y="238" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="164" y="238" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="268" y="238" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="164" y="164" width="104" height="74" fill="#eef4fc" stroke="#2a78d6" stroke-width="2"/>
+<path d="M236 216 L118 144" stroke="#eb6834" stroke-width="2.2" stroke-dasharray="5 3"/>
+<path d="M123 142 L116 143 L120 149" fill="#eb6834"/>
+<circle cx="236" cy="216" r="3.2" fill="#eb6834"/>
+<text class="h" x="560" y="64">Motion-constrained</text>
+<text class="s" x="560" y="82">search range and loop filters clipped to the tile</text>
+<rect x="560" y="90" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="664" y="90" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="768" y="90" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="560" y="164" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="664" y="164" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="768" y="164" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="560" y="238" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="664" y="238" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="768" y="238" width="104" height="74" fill="#f7f8f9" stroke="#c9ced6" stroke-width="1"/>
+<rect x="664" y="164" width="104" height="74" fill="#eef4fc" stroke="#2a78d6" stroke-width="2"/>
+<path d="M736 216 L690 184" stroke="#2a78d6" stroke-width="2.2"/>
+<path d="M695 182 L688 183 L692 189" fill="#2a78d6"/>
+<circle cx="736" cy="216" r="3.2" fill="#2a78d6"/>
+<text class="lbl" x="60" y="332" fill="#eb6834">Tile cannot be decoded alone</text>
+<text class="lbl" x="560" y="332" fill="#2a78d6">Tile is independently decodable</text>
+<path d="M478 200 L536 200" stroke="#b9bec6" stroke-width="2"/>
+<path d="M530 195 L537 200 L530 205" fill="none" stroke="#b9bec6" stroke-width="2"/>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1180 400' width='1180' height='400' font-family='Helvetica,Arial,sans-serif'>
+<style>.t{font-size:13px;font-weight:700;fill:#fff;letter-spacing:.08em}.n{font-size:15px;font-weight:700;fill:#1b1d22}.s{font-size:11.5px;fill:#5d626b}.note{font-size:12px;fill:#6b7280;font-style:italic}</style>
+<rect x='44' y='140' width='214' height='116' rx='12' fill='#f7f8f9' stroke='#5b6fb5' stroke-width='1.5'/>
+<rect x='118.5' y='127' width='65.0' height='26' rx='13' fill='#5b6fb5'/>
+<text class='t' x='151.0' y='145' text-anchor='middle'>INPUT</text>
+<text class='n' x='151.0' y='190' text-anchor='middle'>Frame sequence</text>
+<text class='s' x='151.0' y='214' text-anchor='middle'>32 frames of the</text>
+<text class='s' x='151.0' y='231' text-anchor='middle'>tracked officer</text>
+<rect x='330' y='72' width='250' height='108' rx='12' fill='#f7f8f9' stroke='#3f9e8c' stroke-width='1.5'/>
+<rect x='401.0' y='59' width='108.0' height='26' rx='13' fill='#3f9e8c'/>
+<text class='t' x='455.0' y='77' text-anchor='middle'>APPEARANCE</text>
+<text class='n' x='455.0' y='122' text-anchor='middle'>Visual features</text>
+<text class='s' x='455.0' y='146' text-anchor='middle'>what the officer</text>
+<text class='s' x='455.0' y='163' text-anchor='middle'>and uniform look like</text>
+<rect x='330' y='224' width='250' height='108' rx='12' fill='#f7f8f9' stroke='#5aa05a' stroke-width='1.5'/>
+<rect x='405.3' y='211' width='99.39999999999999' height='26' rx='13' fill='#5aa05a'/>
+<text class='t' x='455.0' y='229' text-anchor='middle'>KEYPOINTS</text>
+<text class='n' x='455.0' y='274' text-anchor='middle'>Pose keypoints</text>
+<text class='s' x='455.0' y='298' text-anchor='middle'>where the arms are,</text>
+<text class='s' x='455.0' y='315' text-anchor='middle'>frame by frame</text>
+<rect x='650' y='140' width='236' height='116' rx='12' fill='#f7f8f9' stroke='#c08a3e' stroke-width='1.5'/>
+<rect x='739.8' y='127' width='56.4' height='26' rx='13' fill='#c08a3e'/>
+<text class='t' x='768.0' y='145' text-anchor='middle'>FUSE</text>
+<text class='n' x='768.0' y='190' text-anchor='middle'>Linear Transformer</text>
+<text class='s' x='768.0' y='214' text-anchor='middle'>reads both streams</text>
+<text class='s' x='768.0' y='231' text-anchor='middle'>across the sequence</text>
+<rect x='944' y='140' width='192' height='116' rx='12' fill='#f7f8f9' stroke='#8a6fb5' stroke-width='1.5'/>
+<rect x='1003.2' y='127' width='73.6' height='26' rx='13' fill='#8a6fb5'/>
+<text class='t' x='1040.0' y='145' text-anchor='middle'>OUTPUT</text>
+<text class='n' x='1040.0' y='190' text-anchor='middle'>Gesture class</text>
+<text class='s' x='1040.0' y='214' text-anchor='middle'>99% at 33 FPS</text>
+<text class='s' x='1040.0' y='231' text-anchor='middle'>on the edge box</text>
+<path d='M266 198.0 L320 126' stroke='#b9bec6' stroke-width='1.8' fill='none'/>
+<path d='M314 121.5 L320 126 L314 130.5' fill='none' stroke='#b9bec6' stroke-width='1.8'/>
+<path d='M266 198.0 L320 278' stroke='#b9bec6' stroke-width='1.8' fill='none'/>
+<path d='M314 273.5 L320 278 L314 282.5' fill='none' stroke='#b9bec6' stroke-width='1.8'/>
+<path d='M588 126 L640 198.0' stroke='#b9bec6' stroke-width='1.8' fill='none'/>
+<path d='M634 193.5 L640 198.0 L634 202.5' fill='none' stroke='#b9bec6' stroke-width='1.8'/>
+<path d='M588 278 L640 198.0' stroke='#b9bec6' stroke-width='1.8' fill='none'/>
+<path d='M634 193.5 L640 198.0 L634 202.5' fill='none' stroke='#b9bec6' stroke-width='1.8'/>
+<path d='M894 198.0 L934 198.0' stroke='#b9bec6' stroke-width='1.8' fill='none'/>
+<path d='M928 193.5 L934 198.0 L928 202.5' fill='none' stroke='#b9bec6' stroke-width='1.8'/>
+<text class='note' x='44' y='378'>Appearance alone confuses similar arm positions. Keypoints alone lose the uniform and the context that separate an officer from a pedestrian waving.</text>
+</svg>

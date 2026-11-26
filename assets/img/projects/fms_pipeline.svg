@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1876 252" width="1876" height="252" font-family="Helvetica,Arial,sans-serif">
+<style>.t{font-size:13px;font-weight:700;fill:#fff;letter-spacing:.08em}.n{font-size:15px;font-weight:700;fill:#1b1d22}.s{font-size:11.5px;fill:#5d626b}</style>
+<rect x="24" y="40" width="232" height="156" rx="12" fill="#f7f8f9" stroke="#5b6fb5" stroke-width="1.5"/>
+<rect x="107.5" y="27" width="65.0" height="26" rx="13" fill="#5b6fb5"/>
+<text class="t" x="140.0" y="45" text-anchor="middle">INPUT</text>
+<text class="n" x="140.0" y="102" text-anchor="middle">In-cabin camera</text>
+<text class="s" x="140.0" y="128" text-anchor="middle">IR</text>
+<text class="s" x="140.0" y="145" text-anchor="middle">per-frame input</text>
+<path d="M262 118.0 L284 118.0" stroke="#b9bec6" stroke-width="1.6"/><path d="M280 113.5 L285 118.0 L280 122.5" fill="none" stroke="#b9bec6" stroke-width="1.6"/>
+<rect x="290" y="40" width="232" height="156" rx="12" fill="#f7f8f9" stroke="#3f9e8c" stroke-width="1.5"/>
+<rect x="369.2" y="27" width="73.6" height="26" rx="13" fill="#3f9e8c"/>
+<text class="t" x="406.0" y="45" text-anchor="middle">DETECT</text>
+<text class="n" x="406.0" y="102" text-anchor="middle">Person detection</text>
+<text class="s" x="406.0" y="128" text-anchor="middle">RT-DETRv4</text>
+<text class="s" x="406.0" y="145" text-anchor="middle">TensorRT FP16</text>
+<path d="M528 118.0 L550 118.0" stroke="#b9bec6" stroke-width="1.6"/><path d="M546 113.5 L551 118.0 L546 122.5" fill="none" stroke="#b9bec6" stroke-width="1.6"/>
+<rect x="556" y="40" width="232" height="156" rx="12" fill="#f7f8f9" stroke="#5aa05a" stroke-width="1.5"/>
+<rect x="639.5" y="27" width="65.0" height="26" rx="13" fill="#5aa05a"/>
+<text class="t" x="672.0" y="45" text-anchor="middle">TRACK</text>
+<text class="n" x="672.0" y="102" text-anchor="middle">Multi-object tracking</text>
+<text class="s" x="672.0" y="128" text-anchor="middle">ByteTrack</text>
+<text class="s" x="672.0" y="145" text-anchor="middle">per-seat track ID</text>
+<path d="M794 118.0 L816 118.0" stroke="#b9bec6" stroke-width="1.6"/><path d="M812 113.5 L817 118.0 L812 122.5" fill="none" stroke="#b9bec6" stroke-width="1.6"/>
+<rect x="822" y="40" width="232" height="156" rx="12" fill="#f7f8f9" stroke="#3f9e8c" stroke-width="1.5"/>
+<rect x="909.8" y="27" width="56.4" height="26" rx="13" fill="#3f9e8c"/>
+<text class="t" x="938.0" y="45" text-anchor="middle">POSE</text>
+<text class="n" x="938.0" y="102" text-anchor="middle">Keypoints</text>
+<text class="s" x="938.0" y="128" text-anchor="middle">ViTPose-H</text>
+<text class="s" x="938.0" y="145" text-anchor="middle">COCO 17 to 51-d</text>
+<path d="M1060 118.0 L1082 118.0" stroke="#b9bec6" stroke-width="1.6"/><path d="M1078 113.5 L1083 118.0 L1078 122.5" fill="none" stroke="#b9bec6" stroke-width="1.6"/>
+<rect x="1088" y="40" width="232" height="156" rx="12" fill="#f7f8f9" stroke="#c08a3e" stroke-width="1.5"/>
+<rect x="1167.2" y="27" width="73.6" height="26" rx="13" fill="#c08a3e"/>
+<text class="t" x="1204.0" y="45" text-anchor="middle">BUFFER</text>
+<text class="n" x="1204.0" y="102" text-anchor="middle">Per-seat frame buffer</text>
+<text class="s" x="1204.0" y="128" text-anchor="middle">circular 90 frames to 15 segments</text>
+<path d="M1326 118.0 L1348 118.0" stroke="#b9bec6" stroke-width="1.6"/><path d="M1344 113.5 L1349 118.0 L1344 122.5" fill="none" stroke="#b9bec6" stroke-width="1.6"/>
+<rect x="1354" y="40" width="232" height="156" rx="12" fill="#f7f8f9" stroke="#c08a3e" stroke-width="1.5"/>
+<rect x="1433.2" y="27" width="73.6" height="26" rx="13" fill="#c08a3e"/>
+<text class="t" x="1470.0" y="45" text-anchor="middle">ACTION</text>
+<text class="n" x="1470.0" y="102" text-anchor="middle">Action recognition</text>
+<text class="s" x="1470.0" y="128" text-anchor="middle">DualTemporalActionNet</text>
+<text class="s" x="1470.0" y="145" text-anchor="middle">9 classes</text>
+<path d="M1592 118.0 L1614 118.0" stroke="#b9bec6" stroke-width="1.6"/><path d="M1610 113.5 L1615 118.0 L1610 122.5" fill="none" stroke="#b9bec6" stroke-width="1.6"/>
+<rect x="1620" y="40" width="232" height="156" rx="12" fill="#f7f8f9" stroke="#8a6fb5" stroke-width="1.5"/>
+<rect x="1699.2" y="27" width="73.6" height="26" rx="13" fill="#8a6fb5"/>
+<text class="t" x="1736.0" y="45" text-anchor="middle">OUTPUT</text>
+<text class="n" x="1736.0" y="102" text-anchor="middle">Action / state + alert</text>
+<text class="s" x="1736.0" y="128" text-anchor="middle">KETI JSON over TCP at 10 Hz</text>
+</svg>

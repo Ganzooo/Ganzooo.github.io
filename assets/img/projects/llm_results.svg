@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" font-family="Helvetica,Arial,sans-serif">
+<text x="40" y="34" font-size="14" font-weight="700" fill="#1b1d22">Inference latency</text>
+<text x="40" y="54" font-size="11.5" fill="#6b7280">relative, lower is better</text>
+<path d="M46 258 L46 126 Q46 122 50 122 L128 122 Q132 122 132 126 L132 258 Z" fill="#2a78d6"/>
+<text x="89.0" y="113" font-size="13" font-weight="700" fill="#1b1d22" text-anchor="middle">2.0x</text>
+<text x="89.0" y="277" font-size="11.5" fill="#6b7280" text-anchor="middle">PyTorch</text>
+<path d="M176 258 L176 194 Q176 190 180 190 L258 190 Q262 190 262 194 L262 258 Z" fill="#eb6834"/>
+<text x="219.0" y="181" font-size="13" font-weight="700" fill="#1b1d22" text-anchor="middle">1.0x</text>
+<text x="219.0" y="277" font-size="11.5" fill="#6b7280" text-anchor="middle">LiteRT INT8</text>
+<path d="M40 258 L262 258" stroke="#d7dade" stroke-width="1"/>
+<text x="490" y="34" font-size="14" font-weight="700" fill="#1b1d22">Power draw</text>
+<text x="490" y="54" font-size="11.5" fill="#6b7280">watts, lower is better</text>
+<path d="M496 258 L496 127 Q496 123 500 123 L578 123 Q582 123 582 127 L582 258 Z" fill="#2a78d6"/>
+<text x="539.0" y="114" font-size="13" font-weight="700" fill="#1b1d22" text-anchor="middle">5.52 W</text>
+<text x="539.0" y="277" font-size="11.5" fill="#6b7280" text-anchor="middle">PyTorch</text>
+<path d="M626 258 L626 142 Q626 138 630 138 L708 138 Q712 138 712 142 L712 258 Z" fill="#eb6834"/>
+<text x="669.0" y="129" font-size="13" font-weight="700" fill="#1b1d22" text-anchor="middle">4.91 W</text>
+<text x="669.0" y="277" font-size="11.5" fill="#6b7280" text-anchor="middle">LiteRT INT8</text>
+<path d="M490 258 L712 258" stroke="#d7dade" stroke-width="1"/>
+<text x="40" y="292" font-size="11.5" font-style="italic" fill="#6b7280">Raspberry Pi 4. Two measures on different scales, shown as separate panels rather than one dual axis.</text>
+</svg>

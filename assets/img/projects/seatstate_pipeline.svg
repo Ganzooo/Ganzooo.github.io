@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1364 242" width="1364" height="242" font-family="Helvetica,Arial,sans-serif">
+<style>.t{font-size:13px;font-weight:700;fill:#fff;letter-spacing:.08em}.n{font-size:15px;font-weight:700;fill:#1b1d22}.s{font-size:11.5px;fill:#5d626b}.note{font-size:12px;fill:#6b7280;font-style:italic}</style>
+<rect x="24" y="40" width="236" height="156" rx="12" fill="#f7f8f9" stroke="#5b6fb5" stroke-width="1.5"/>
+<rect x="113.8" y="27" width="56.4" height="26" rx="13" fill="#5b6fb5"/>
+<text class="t" x="142.0" y="45" text-anchor="middle">REAL</text>
+<text class="n" x="142.0" y="96" text-anchor="middle">A few real photos</text>
+<text class="s" x="142.0" y="120" text-anchor="middle">the entire ground truth</text>
+<path d="M266 118.0 L288 118.0" stroke="#b9bec6" stroke-width="1.6"/><path d="M284 113.5 L289 118.0 L284 122.5" fill="none" stroke="#b9bec6" stroke-width="1.6"/>
+<rect x="294" y="40" width="236" height="156" rx="12" fill="#f7f8f9" stroke="#3f9e8c" stroke-width="1.5"/>
+<rect x="379.5" y="27" width="65.0" height="26" rx="13" fill="#3f9e8c"/>
+<text class="t" x="412.0" y="45" text-anchor="middle">SYNTH</text>
+<text class="n" x="412.0" y="96" text-anchor="middle">Procedural generation</text>
+<text class="s" x="412.0" y="120" text-anchor="middle">material, lighting, item,</text>
+<text class="s" x="412.0" y="137" text-anchor="middle">position, severity - seeded</text>
+<path d="M536 118.0 L558 118.0" stroke="#b9bec6" stroke-width="1.6"/><path d="M554 113.5 L559 118.0 L554 122.5" fill="none" stroke="#b9bec6" stroke-width="1.6"/>
+<rect x="564" y="40" width="236" height="156" rx="12" fill="#f7f8f9" stroke="#5aa05a" stroke-width="1.5"/>
+<rect x="640.9" y="27" width="82.19999999999999" height="26" rx="13" fill="#5aa05a"/>
+<text class="t" x="682.0" y="45" text-anchor="middle">TEACHER</text>
+<text class="n" x="682.0" y="96" text-anchor="middle">Qwen2.5-VL-72B</text>
+<text class="s" x="682.0" y="120" text-anchor="middle">zero-shot labelling</text>
+<text class="s" x="682.0" y="137" text-anchor="middle">match-with-retry curation</text>
+<path d="M806 118.0 L828 118.0" stroke="#b9bec6" stroke-width="1.6"/><path d="M824 113.5 L829 118.0 L824 122.5" fill="none" stroke="#b9bec6" stroke-width="1.6"/>
+<rect x="834" y="40" width="236" height="156" rx="12" fill="#f7f8f9" stroke="#c08a3e" stroke-width="1.5"/>
+<rect x="910.9" y="27" width="82.19999999999999" height="26" rx="13" fill="#c08a3e"/>
+<text class="t" x="952.0" y="45" text-anchor="middle">STUDENT</text>
+<text class="n" x="952.0" y="96" text-anchor="middle">Qwen2-VL-2B + LoRA</text>
+<text class="s" x="952.0" y="120" text-anchor="middle">stage 1: image to text</text>
+<path d="M1076 118.0 L1098 118.0" stroke="#b9bec6" stroke-width="1.6"/><path d="M1094 113.5 L1099 118.0 L1094 122.5" fill="none" stroke="#b9bec6" stroke-width="1.6"/>
+<rect x="1104" y="40" width="236" height="156" rx="12" fill="#f7f8f9" stroke="#8a6fb5" stroke-width="1.5"/>
+<rect x="1185.2" y="27" width="73.6" height="26" rx="13" fill="#8a6fb5"/>
+<text class="t" x="1222.0" y="45" text-anchor="middle">OUTPUT</text>
+<text class="n" x="1222.0" y="96" text-anchor="middle">Structured JSON</text>
+<text class="s" x="1222.0" y="120" text-anchor="middle">stage 2: text only</text>
+<text class="s" x="1222.0" y="137" text-anchor="middle">evidence + subtype</text>
+<text class="note" x="24" y="226">The scarce resource was labelled data, not model capacity - so the pipeline manufactures data and distills the labels.</text>
+</svg>
