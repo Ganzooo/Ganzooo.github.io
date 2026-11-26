@@ -240,10 +240,6 @@ exclude:
   - gems/
   - migrations/
   - vendor
-  # The Ornol pilot is a self-contained static site. Keep it out of the Jekyll build so
-  # jekyll-terser and the other plugins never rewrite it; the deploy workflow copies it
-  # into _site unchanged.
-  - ornol/
 keep_files:
   - CNAME
   - .nojekyll

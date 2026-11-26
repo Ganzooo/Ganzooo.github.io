@@ -7,7 +7,6 @@ on:
       - main
     paths:
       - "assets/**"
-      - "ornol/**"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -35,7 +34,6 @@ on:
       - main
     paths:
       - "assets/**"
-      - "ornol/**"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -103,13 +101,6 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
-      - name: Add the Ornol pilot 🎬
-        # ornol/ is a static site served unchanged at /ornol/. _config.yml excludes it from
-        # the Jekyll build, where jekyll-terser would rewrite its ES modules and silently
-        # drop any file it fails to parse, so it is copied in after the build instead.
-        run: |
-          rm -rf _site/ornol
-          cp -R ornol _site/ornol
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
